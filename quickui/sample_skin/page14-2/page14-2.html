@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title></title>
+		<!--框架必需start-->
+		<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+		<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+		<script type="text/javascript" src="../../libs/js/framework.js"></script>
+		<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" id="skin" prePath="../../" />
+		<link rel="stylesheet" type="text/css" id="customSkin" />
+		<!--框架必需end-->
+		<script src="../../libs/thirdparty/highcharts/js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+	</head>
+
+	<body>
+		<!--<img src="../../libs/images/demo/img2.jpg" />-->
+		<div class="demo_template clearfloat">
+			<!--数据统计-->
+			<div class="data_statistics">
+				<div class="demo_title">
+					<span class="_name">数据统计</span>
+					<span class="_more">更多</span>
+				</div>
+				<div class="" id="container" style="max-width: 580px;height: 250px;">
+					
+				</div>
+
+			</div>
+			<!--最新消息-->
+			<div class="new_news">
+				<div class="demo_title">
+					<span class="_name">最新信息</span>
+					<span class="_more">更多</span>
+				</div>
+				<ul class="thingS_make">
+					<li><a href="javascript:;">用HTML5技术（以下简称H5）开发APP</a></li>
+					<li><a href="javascript:;">已经不是件新鲜的事了</a></li>
+					<li><a href="javascript:;">因为H5技术入门的门槛低</a></li>
+					<li><a href="javascript:;">一个开发者有一两年前端经验就能做</a></li>
+					<li><a href="javascript:;">而且跨平台</a></li>
+					<li><a href="javascript:;">一套代码可以用在安卓手机和苹果手机</a></li>
+					<li><a href="javascript:;">让开发和维护一个APP的成本极大的降低</a></li>
+					<li><a href="javascript:;">这几年所有的东西都是移动端</a></li>
+					<li><a href="javascript:;">我们现在能够讲出来的大部分产品</a></li>
+					<li><a href="javascript:;">都会在手机上有应用</a></li>
+				</ul>
+			</div>
+			<!--待办事项-->
+			<div class="schedule_thing">
+				<div class="demo_title">
+					<span class="_name">待办事项</span>
+					<span class="_more">更多</span>
+				</div>
+				<ul class="thingS_make">
+					<li><a href="javascript:;">用HTML5技术（以下简称H5）开发APP</a></li>
+					<li><a href="javascript:;">已经不是件新鲜的事了</a></li>
+					<li><a href="javascript:;">因为H5技术入门的门槛低</a></li>
+					<li><a href="javascript:;">一个开发者有一两年前端经验就能做</a></li>
+					<li><a href="javascript:;">而且跨平台</a></li>
+					<li><a href="javascript:;">一套代码可以用在安卓手机和苹果手机</a></li>
+					<li><a href="javascript:;">让开发和维护一个APP的成本极大的降低</a></li>
+
+				</ul>
+			</div>
+			<!--常用工具-->
+			<div class="common_tools">
+				<div class="demo_title">
+					<span class="_name">常用工具</span>
+					<span class="_more">更多</span>
+				</div>
+				<ul class="Column_Chart clearfloat">
+					<li class="_Information">
+						<img src="../../libs/icons/icon_flat/iphone.png"/>
+						<p>信息资料</p>
+					</li>
+					<li class="_compile">
+						<img src="../../libs/icons/icon_flat/pen.png"/>
+						<p>编辑</p>
+					</li>
+					<li class="_notepad">
+						<img src="../../libs/icons/icon_flat/livejournal.png"/>
+						<p>记事本</p>
+					</li>
+					<li class="_menology">
+						<img src="../../libs/icons/icon_flat/notepad.png"/>
+						<p>任务日历</p>
+					</li>
+					<li class="_ImageManagement">
+						<img src="../../libs/icons/icon_flat/image.png"/>
+						<p>图片管理</p>
+					</li>
+					<li class="_home">
+						<img src="../../libs/icons/icon_flat/home.png"/>
+						<p>主页</p>
+					</li>
+					<li class="_search">
+						<img src="../../libs/icons/icon_flat/search.png"/>
+						<p>搜索</p>
+					</li>
+				</ul>
+			</div>
+			<!--信息统计-->
+			<div class="information_statistics">
+				<div class="demo_title">
+					<span class="_name">信息统计</span>
+					<span class="_more">更多</span>
+				</div>
+				<ul class="thingS_make">
+					<li><a href="javascript:;">用HTML5技术（以下简称H5）开发APP</a></li>
+					<li><a href="javascript:;">已经不是件新鲜的事了</a></li>
+					<li><a href="javascript:;">因为H5技术入门的门槛低</a></li>
+					<li><a href="javascript:;">一个开发者有一两年前端经验就能做</a></li>
+					<li><a href="javascript:;">而且跨平台</a></li>
+					<li><a href="javascript:;">一套代码可以用在安卓手机和苹果手机</a></li>
+					<li><a href="javascript:;">让开发和维护一个APP的成本极大的降低</a></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var chart;
+
+			$(function() {
+
+				// Build the chart
+				$('#container').highcharts({
+					chart: {
+						plotBackgroundColor: null,
+						plotBorderWidth: null,
+						plotShadow: false
+					},
+					title: {
+						text: '2010年浏览器市场份额'
+					},
+					tooltip: {
+						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+					},
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							dataLabels: {
+								enabled: true,
+								color: '#000000',
+								connectorColor: '#000000',
+								format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+							},
+							showInLegend: false
+						}
+					},
+					series: [{
+						type: 'pie',
+						name: '份额：',
+						data: [
+							['Firefox', 45.0],
+							['IE', 26.8],
+							{
+								name: 'Chrome',
+								y: 12.8,
+								sliced: true,
+								selected: true
+							},
+							['Safari', 8.5],
+							['Opera', 6.2],
+							['Others', 0.7]
+						]
+					}]
+				});
+			});
+		</script>
+	</body>
+
+</html>

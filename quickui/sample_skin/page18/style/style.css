@@ -1,0 +1,174 @@
+.content_win{
+	/*width: 100%;
+	margin: auto;*/
+	/*border: 1px solid red;*/
+	padding: 10px 20px;
+}
+
+.product_list{
+	/*border: 1px solid black;*/
+	margin-bottom: 10px;
+	height: 100px;
+	overflow: hidden;
+}
+.product_list>.list_con{
+	width: 200px;
+	/*height: 55px;*/
+	padding: 15px;
+	background: #fff;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.product_list>.list_con img{
+	display: block;
+	float: left;
+	width: 60px;
+	height: 62px;
+	/*margin: 20px;*/
+	margin-right: 20px;
+	/*border: 1px solid red;*/
+}
+.product_list>.list_con .text{
+	float: left;
+	/*border: 1px solid red;*/
+	width: 100px;
+	margin-top: 5px;
+}
+.product_list>.list_con .text p{
+	font-size: 24px;
+	color: #3B454A;
+	font-weight: bold;
+}
+.product_list>.list_con .text span{
+	font-size: 12px;
+	color: #3B454A;
+	line-height: 20px;
+}
+.moban{}
+.moban>span{
+	display: block;
+	color: #3B454A;
+	font-weight: bold;
+	line-height: 30px;
+}
+.moban .moban_content{
+	padding: 15px;
+	background: #fff;
+	margin-bottom: 15px;
+}
+.moban .moban_content>span{
+	display: block;
+	border-radius: 10px;
+	background: #FA5B58;
+	width: 110px;
+	color: #fff;
+	font-size: 12px;
+	/*text-indent: 1em;*/
+	line-height: 20px;
+}
+.moban .moban_content2>span{
+	background: #61B9EB;
+}
+.moban .moban_content>span i{
+	display: block;
+	width: 13px;
+	height: 13px;
+	background: url(time.png) no-repeat center center;
+	margin: 3px 10px 0 10px;
+	float: left;
+}
+.moban .moban_content .text{
+	padding-top: 30px;
+}
+.moban .moban_content .text>span{
+	display: block;
+	width: 49%;
+	border-right: 1px solid #EDF1F4;
+	float: left;
+}
+.moban .moban_content .text>span.pa{
+	font-size: 30px;
+	color: #FE8F3C;
+	line-height: 50px;
+	text-align: center;
+}
+.moban .moban_content .text>span.pa2{
+	color: #61B9EB;
+}
+.moban .moban_content .text>span p{
+	font-size: 12px;
+	color: #3B454A;
+	display: block;
+	/*text-align: center;*/
+	text-indent: 2.3em;
+}
+.moban .moban_content .text>span span{
+	color: #3B454A;
+	display: block;
+	/*text-align: center;*/
+	text-indent: 2em;
+	font-weight: bold;
+}
+.moban2{
+	padding-left: 15px;
+}
+
+.new{
+	background: #fff;
+	height: 100%;
+	overflow: auto;
+}
+.title{
+	padding: 0 15px;
+	border-bottom: 1px solid #F1F2F3;
+	line-height: 40px;
+	background: #fff;
+}
+.title span{
+	display: block;
+	float: left;
+	color: #3B454A;
+	font-weight: bold;
+	
+}
+.title a{
+	display: block;
+	float: right;
+	font-size: 12px;
+	color: #3B454A;
+}
+.new ul{}
+.new>ul li{
+	border-bottom: 1px solid #F1F2F3;
+	padding: 10px;
+}
+.new>ul li img{
+	display: block;
+	width: 110px;
+	float: left;
+	/*border: 1px solid red;*/
+	margin-right: 15px;
+	margin-top: 10px;
+}
+.new>ul li p{
+	display: block;
+	color: #3B454A;
+	font-weight: bold;
+	line-height: 29px;
+}
+.new>ul li p span{
+	font-weight: normal;
+	color: #D4D6D5;
+	font-size: 12px;
+	float: right;
+}
+.new>ul li>span{
+	display: block;
+	color: #3B454A;
+	font-size: 12px;
+	line-height: 20px;
+	height: 40px;
+	overflow: hidden;
+}

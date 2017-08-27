@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<!--框架必需start-->
+		<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+		<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+		<script type="text/javascript" src="../../libs/js/framework.js"></script>
+		<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" id="skin" prePath="../../" />
+		<link rel="stylesheet" type="text/css" id="customSkin" />
+		<!--框架必需end-->
+		
+		<!--基本选项卡start-->
+		<script type="text/javascript" src="../../libs/js/nav/basicTab.js"></script>
+		<!--基本选项卡end-->
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<style type="text/css">
+			body{
+				/*background: #fff;*/
+			}
+			.buttonGroup{
+				border-color: #298CEF;
+				
+			}
+			.buttonGroup span{
+				color: #298CEF;
+			}
+			.buttonGroup span:hover{
+				background-color: #298CEF;
+				color: #fff;
+			}
+			.buttonGroup span.active{
+				background-color: #298CEF;
+				color: #fff;
+			}
+			.buttonGroup .leftButton, .buttonGroup .centerButton{
+				border-right: 1px solid #298CEF;
+			}
+			.basicTab_normal_center{
+				padding: 0 9px;
+			}
+			.mainCon{
+				float: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="Content_win">
+			<!--<div class="car_title">
+				<span>车辆查询</span>
+				<i onclick="top.closeMapPanel()"></i>
+				<div class="clear"></div>
+			</div>-->
+			<div class="basicTab">
+				<div name="车辆查询" style="height:auto;">
+					<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+						<tr>
+							<td><input type="text" watermark="车牌号" style="width: 100px;margin-right: 20px;*margin-right: 5px;"/></td>
+							<td>
+								<select selWidth="100">
+									<option value="">归属地</option>
+									<option value="0">北京</option>
+									<option value="1">上海</option>
+									<option value="2">深圳</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="text" watermark="所属企业名称" style="width: 220px;*width: 210px;margin-top: 10px;"/></td>
+						</tr>
+					</table>
+					<div class="car">
+						<a href="javascript:;">清除车辆</a>
+						<input type="button" name="" id="" value="公交出行" class="button find_car" onclick="sure()"/>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div name="车辆调度" style="height:auto;">
+					<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+						
+						<tr>
+							<td><input type="text" watermark="车牌号" style="width: 100px;margin-right: 20px;*margin-right: 5px;"/></td>
+							<td>
+								<select selWidth="100">
+									<option value="">归属地</option>
+									<option value="0">北京</option>
+									<option value="1">上海</option>
+									<option value="2">深圳</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="text" watermark="所属企业名称" style="width: 210px;margin-top: 10px;"/></td>
+						</tr>
+					</table>
+					<div class="car">
+						<a href="javascript:;">清除车辆</a>
+						<input type="button" name="" id="" value="公交出行" class="button find_car" onclick="sure()"/>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div name="问题反馈" style="height:auto;">
+					<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+						
+						<tr>
+							<td><input type="text" watermark="车牌号" style="width: 100px;margin-right: 20px;*margin-right: 5px;"/></td>
+							<td>
+								<select selWidth="100">
+									<option value="">归属地</option>
+									<option value="0">北京</option>
+									<option value="1">上海</option>
+									<option value="2">深圳</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="text" watermark="所属企业名称" style="width: 210px;margin-top: 10px;"/></td>
+						</tr>
+					</table>
+					<div class="car">
+						<a href="javascript:;">清除车辆</a>
+						<input type="button" name="" id="" value="公交出行" class="button find_car" onclick="sure()"/>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="buttonGroup" itemWidth="75" radio="true">
+				<span class="leftButton active">全部</span>
+				<span class="centerButton">在线</span>
+				<span class="rightButton">关注</span>
+			</div>
+			<div class="car_show">
+				<p>上线 <span>56000</span> 辆 | 在线 <span>6000</span> 辆 | 离线 <span>50000</span> 辆</p>
+			</div>
+			<ul class="car_license">
+				<li>
+					<div class="icon_title">
+						<span>浙A98888</span>
+						<div class="left">
+							<i class="operation1"></i>
+							<i class="operation2"></i>
+							<b></b>
+							<i class="operation3"></i>
+							<i class="operation4"></i>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<p>金华时 | 301国道道路</p>
+					<p>浙江省金华市通航直达客运有限公司</p>
+				</li>
+				<li>
+					<div class="icon_title">
+						<span>浙A98888</span>
+						<div class="left">
+							<i class="operation1"></i>
+							<i class="operation2"></i>
+							<b></b>
+							<i class="operation3"></i>
+							<i class="operation4"></i>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<p>金华时 | 301国道道路</p>
+					<p>浙江省金华市通航直达客运有限公司</p>
+				</li>
+				<li>
+					<div class="icon_title">
+						<span>浙A98888</span>
+						<div class="left">
+							<i class="operation1"></i>
+							<i class="operation2"></i>
+							<b></b>
+							<i class="operation3"></i>
+							<i class="operation4"></i>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<p>金华时 | 301国道道路</p>
+					<p>浙江省金华市通航直达客运有限公司</p>
+				</li>
+				<li>
+					<div class="icon_title">
+						<span>浙A98888</span>
+						<div class="left">
+							<i class="operation1"></i>
+							<i class="operation2"></i>
+							<b></b>
+							<i class="operation3"></i>
+							<i class="operation4"></i>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<p>金华时 | 301国道道路</p>
+					<p>浙江省金华市通航直达客运有限公司</p>
+				</li>
+				<li>
+					<div class="icon_title">
+						<span>浙A98888</span>
+						<div class="left">
+							<i class="operation1"></i>
+							<i class="operation2"></i>
+							<b></b>
+							<i class="operation3"></i>
+							<i class="operation4"></i>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<p>金华时 | 301国道道路</p>
+					<p>浙江省金华市通航直达客运有限公司</p>
+				</li>
+				<li>
+					<div class="icon_title">
+						<span>浙A98888</span>
+						<div class="left">
+							<i class="operation1"></i>
+							<i class="operation2"></i>
+							<b></b>
+							<i class="operation3"></i>
+							<i class="operation4"></i>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<p>金华时 | 301国道道路</p>
+					<p>浙江省金华市通航直达客运有限公司</p>
+				</li>
+				
+			</ul>
+			<div class="clear"></div>
+		</div>
+		
+	<script type="text/javascript">
+		function sure(){
+			top.Dialog.open({URL:"../../sample_skin/map/map-content-2.html",Title:"浙A98888",Style:"simpleTip",IconClass:"busIcon",Modal:false,Width:450,Height:280});
+		}
+	</script>
+	</body>
+
+</html>

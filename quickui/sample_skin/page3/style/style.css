@@ -1,0 +1,182 @@
+/*index.html的css*/
+.Content_win{
+	width: 1200px;
+	height: 100%;
+	margin: auto;
+	/*border: 1px solid red;*/
+	padding: 20px 0 0 20px;
+}
+.content_left{
+	width: 870px;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-right: 20px;
+}
+.content_left>ul{
+	width: 100%;
+	/*border: 1px solid red;*/
+}
+.content_left>ul li{
+	width: 180px;
+	height: 105px;
+	float: left;
+	margin-right: 10px;
+	/*border: 1px solid black;*/
+	background: #FF5454;
+}
+.content_left>ul li .left{
+	width: 75px;
+	height: 75px;
+	float: left;
+}
+.content_left>ul li .left img{
+	display: block;
+	width: 50px;
+	margin: auto;
+	margin-top: 13px;
+	filter:Alpha(opacity=60);
+	opacity: .6;
+}
+.content_left>ul li .right{
+	float: right;
+	height: 75px;
+	line-height: 75px;
+}
+.content_left>ul li .right span{
+	font-size: 40px;
+	color: #fff;
+	text-shadow:#666 1px 1px 5px;
+	margin-right: 15px;
+}
+.content_left>ul li .bottom{
+	clear: both;
+	width: 100%;
+	height: 30px;
+	/*background-color: rgba(225,225,225,0.6);
+	background-color:#FFFFFF\6;
+	filter:Alpha(opacity=60);*/
+	line-height: 30px;
+	color: #fff;
+	text-indent: 2em;
+}
+.content_left>ul li .bottom b{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(stair_icon_right.png) no-repeat center center;
+	float: right;
+	margin-right: 10px;
+}
+
+.content_left>ul li .bottom i{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-right: 5px;
+}
+.content_left>ul li.user_title{
+	width: 300px;
+	background: #4C8DEE;
+	position: relative;
+}
+.content_left>ul li.user_title .left{
+	/*position: absolute;*/
+	top: 5px;
+	left: 5px;
+	z-index: 99;
+}
+.content_left>ul li.user_title .left{
+	width: 85px;
+}
+.content_left>ul li.user_title .left img{
+	width: 85px;
+	*width: 80px;
+	margin: 0;
+	/**border: 1px solid red;*/
+	display: block;
+}
+.content_left>ul li.user_title .right p{
+	display: block;
+	width: 210px;
+	line-height: 30px;
+	color: #fff;
+	margin-top: 5px;
+}
+
+.content_left>ul li.user_title .bottom span{
+	float: left;
+	display: block;
+	text-indent: 0;
+	margin-left: 10px;
+}
+.content_left>ul li .bottom i.user_set{
+	background: url(user_set.png) no-repeat center center;
+}
+.content_left>ul li .bottom i.user_switch{
+	background: url(user_switch.png) no-repeat center center;
+}
+/*对比分析*/
+.Contrast_win{
+	width: 100%;
+	height: 320px;
+	background: #fff;
+	border: 1px solid #EEEEEE;
+	margin-top: 20px;
+}
+.Contrast_win .title,
+.content_right .title{
+	width: 100%;
+	/*height: 35px;*/
+	border-bottom: 1px solid #EEEEEE;
+	box-sizing: border-box;
+	padding: 5px;
+}
+.Contrast_win .title i,
+.content_right .title i{
+	display: block;
+	float: left;
+	width: 5px;
+	height: 15px;
+	background: #B6B6B6;
+	margin: 6px 15px 0 0;
+}
+
+
+
+
+
+
+
+.content_right{
+	width: 280px;
+	height: 790px;
+	box-sizing: border-box;
+	border: 1px solid #EEEEEE;
+	border-bottom: 0;
+	float: left;
+	background: #fff;
+}
+.content_right .title{
+	padding-left: 15px;
+}
+.content_right .list_content{
+	width: 100%;
+	background: #fff;
+	/*padding-left: 15px;*/
+	box-sizing: border-box;
+	cursor: pointer;
+	cursor: hand;
+	border-bottom: 1px solid #EEEEEE;
+}
+.content_right .list_content:hover{
+	background: #F6F6F6;
+}
+.content_right .list_content span{
+	font-size: 12px;
+	color: #AEAEAE;
+}
+.content_right .list_content p,
+.content_right .list_content span{
+	margin-left: 15px;
+}

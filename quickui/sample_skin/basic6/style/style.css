@@ -1,0 +1,142 @@
+.tab_content{
+	width: 1130px;
+	padding: 20px 0;
+	/*background: #fff;*/
+	/*display: none;*/
+	margin: auto;
+}
+.tab_content .top,
+.tab_content .bottom{
+	width: 100%;
+	background: #fff;
+}
+/*商品销售量*/
+.tab_time{
+	/*width: 100%;*/
+	height: 50px;
+	background: #fff;
+	margin-top: 5px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+.tab_time ul{
+	width:800px;
+	float: left;
+	/*padding: 10px 20px;*/
+}
+.tab_time ul li{
+	float: left;
+	padding: 0 15px;
+	border-bottom: 2px solid transparent;
+	cursor: pointer;
+}
+.tab_time ul li:hover{
+	color: #3399ff;
+	border-bottom: 2px solid #3399ff;
+}
+.tab_time ul li.active{
+	color: #3399ff;
+	border-bottom: 2px solid #3399ff;
+}
+.tab_time ul li.no_hover:hover{
+	border-bottom: 2px solid transparent;
+}
+
+
+/*订单CSS*/
+
+.indent{
+	/*width: 100%;*/
+	/*border: 1px solid red;*/
+	padding: 20px;
+	box-sizing: border-box;
+}
+.indent>ul{
+	width: 100%;
+	*padding-bottom: 20px;
+}
+.indent>ul li{
+	width: 250px;
+	height: 80px;
+	/*border: 1px solid red;*/
+	float: left;
+	box-sizing: border-box;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.indent>ul li .left{
+	width: 20%;
+	height: 100%;
+	background: #E65A43;
+	float: left;
+}
+.indent>ul li .left img{
+	display: block;
+	width: 40%;
+	margin: 60% auto 0 auto;
+}
+.indent>ul li .right{
+	width: 80%;
+	*width: 63%;
+	height: 100%;
+	*height: 98%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0px 20px;
+	border: 1px solid #DBDBDB;
+	border-left: 0;
+	border-radius: 0px 5px 5px 0;
+}
+.indent>ul li .right p{
+	font-size: 12px;
+	color: #7A7A7A;
+	line-height: 35px;
+}
+.indent>ul li .right p.right_title{
+	border-bottom: 1px solid #DBDBDB;
+}
+.indent>ul li .right p span{
+	font-size: 24px;
+	color: #E65947;
+}
+.indent_title{
+	width: 100%;
+	height: 35px;
+	background: #D9EDF6;
+	border-bottom: 2px #CCD6D9;
+	line-height: 35px;
+	color: #6C97AF;
+	border-radius: 5px 5px 0 0;
+}
+.indent_title span{
+	display: block;
+	text-indent: 2em;
+	
+}
+.analyze1{
+	width: 330px;
+	height: 450px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	border-radius: 5px;
+	margin: 20px 47px 20px 0;
+	float: left;
+	box-sizing: border-box;
+}
+.analyze1 .analyze1_title{
+	display: block;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+	background: #F7F7F7;
+	
+}
+.analyze1 .analyze1_title span{
+	display: inline-block;
+	text-indent: 1em;
+	width: 145px;
+	line-height: 40px;
+	float: left;
+}

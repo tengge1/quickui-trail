@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<title></title>
+<!--框架必需start-->
+<link href="../../libs/css/import_main.css" rel="stylesheet" type="text/css"/>
+<link href="../../libs/skins/blue/style.css" rel="stylesheet" type="text/css" id="theme" themeColor="blue" positionTarget="positionContent"/>
+<link href="skin/style.css" rel="stylesheet" type="text/css" id="skin" skinPath="system/style1_accordion_blue/skin/"/>
+<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../libs/js/main.js"></script>
+<!--框架必需end-->
+
+<!--弹窗组件start-->
+<script type="text/javascript" src="../../libs/js/popup/drag.js"></script>
+<script type="text/javascript" src="../../libs/js/popup/dialog.js"></script>
+<!--弹窗组件end-->
+
+<!--引入提示组件start-->
+<script type="text/javascript" src="../../libs/js/popup/toast.js"></script>
+<script type="text/javascript" src="../../libs/js/popup/notice.js"></script>
+<!--引入提示组件end-->
+
+<!--左侧导航start-->
+<script type="text/javascript" src="../../libs/js/nav/menuNav.js"></script>
+<!--左侧导航end-->
+
+<!--信件箱start-->
+<link rel="stylesheet" type="text/css" href="../../libs/skins/blue/msgbox.css" />
+<script type="text/javascript" src="../../libs/js/popup/msgbox.js"></script>
+<!--信件箱end-->
+
+<style>
+	body{
+		width: 100%!important;
+		margin: 0;
+		padding:0;
+	}
+	/*修改小铃铛样式*/
+	.right_tip{
+		width: 60px;
+		height: 50px;
+		margin-left: 0;
+		cursor: pointer;
+	}
+	.tip_icon{
+		margin-top: 12px;
+	}
+	.tip_balloons{
+		margin-top: 5px;
+	}
+	.tip_toggle_content{
+		top: 50px;
+		right: -16px;
+	}
+	.tip_allcontent_win,
+	.tip_allcontent{
+		top: 0px;
+	}
+	.tip_icon{
+		background: url(skin/page_head_ico.png) 0 -60px no-repeat;
+	}
+	.tip_icon_win:hover .tip_icon{
+		background: url(skin/page_head_ico.png) 0 -60px no-repeat;
+	}
+	#positionContent{
+		float: left;
+		width: 250px;
+		height: 50px;
+		line-height: 50px;
+		/*color: #fff;*/
+		margin-left: 20px;
+	}
+</style>
+</head>
+<body>
+<div id="mainFrame">
+<!--头部与导航start-->
+<div id="hbox"></div>
+<!--头部与导航end-->
+<div id="mainFrame">
+			<table width="100%" cellpadding="0" cellspacing="0" class="table_border0">
+				<tr>
+					<!--左侧区域start-->
+					<td id="hideCon" class="ver01 ali01">
+						<div id="lbox">
+							<div id="lbox_topcenter">
+								<div class="LeftNav_title">
+									<b></b>
+									<div class="clear"></div>
+								</div>
+								<div class="logo_win">
+									<img src="skin/logo.png"/>
+									<p>信息管理系统界面</p>
+								</div>
+							</div>
+							<div id="lbox_middlecenter">
+								<div id="lbox_middleleft">
+									<div id="lbox_middleright">
+										<div id="bs_left">
+											
+											
+											<div class="LeftNav_win">
+												
+												<div class="stair_win" id="stair_win">
+													<img src="" alt="" />
+												</div>
+											</div>
+										</div>
+										<!--更改左侧栏的宽度需要修改id="bs_left"的样式-->
+									</div>
+								</div>
+							</div>
+							<div id="lbox_bottomcenter">
+								<div id="lbox_bottomleft">
+									<div id="lbox_bottomright">
+										<div class="lbox_foot"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+					<!--左侧区域end-->
+
+					<!--右侧区域start-->
+					<td class="ali01 ver01" width="100%">
+						<div id="rbox">
+							<div id="rbox_topcenter">
+								<div>
+									<span>您好，欢迎访问系统应用！</span>
+									<div id="positionContent">首页</div>
+									<ul>
+										<div class="right_tip"></div>
+										<li><b></b></li>
+										<li><a href="../../sample_skin/page1/page1.html" target="frmright"><span class="icon_home">系统首页</span></a></li>
+										<li><b></b></li>
+										<li><span class="icon_lock" onclick="lockScreen()">屏幕锁定</span></li>
+										<li><b></b></li>
+										
+										<li><span class="icon_exit" onclick="top.Dialog.confirm('确定要退出系统吗',function(){window.location='../login/login.html'});">退出系统</span></li>
+										<div class="clear"></div>
+									</ul>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div id="rbox_middlecenter">
+								<div id="rbox_middleleft">
+									<div id="rbox_middleright">
+										<div id="bs_right">
+											<IFRAME style="box-sizing: border-box; background: white;" height="100%" width="100%" frameBorder=0 id=frmright name=frmright src="../../sample_skin/page1/page1.html" allowTransparency="true"></IFRAME>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="rbox_bottomcenter">
+								<div id="rbox_bottomleft">
+									<div id="rbox_bottomright">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+					<!--右侧区域end-->
+				</tr>
+			</table>
+
+			<!--尾部区域start-->
+			<!--<div id="fbox">
+				<div id="bs_footcenter">
+					<div id="bs_footleft">
+						<div id="bs_footright">
+							版权所有：http://www.quickui.net
+						</div>
+					</div>
+				</div>
+			</div>-->
+		</div>
+
+<!--尾部区域start-->
+<!--<div id="fbox">
+	<div id="bs_footcenter">
+	<div id="bs_footleft">
+	<div id="bs_footright">
+		版权所有：http://www.quickui.net
+	</div>
+	</div>
+	</div>
+</div>-->
+</div>
+<!--尾部区域end-->
+
+<!--浏览器resize事件修正start-->
+<div id="resizeFix"></div>
+<!--浏览器resize事件修正end-->
+
+<!--窗口任务栏区域start-->
+<div id="dialogTask" class="dialogTaskBg" style="display:none;"></div>
+<!--窗口任务栏区域end-->
+
+<!--载进度条start-->
+<div class="progressBg" id="progress" style="display:none;"><div class="progressBar"></div></div>
+<!--载进度条end-->
+<!---->
+<script type="text/javascript">
+	var data = [
+		{ "news": "请假正在审批中" },
+		{ "news": "请各位周五前提交周报" },
+		{ "news": "QUICKUI新版本上线啦" }
+	];
+	tip_construction(data, ".right_tip", 10000); //数据，div的class或者id，定时器时间
+	
+	var menuData=[
+	{ "id":"2", "parentId":"0", "name":"表格","icon": "./skin/index_icon.png","backgroundPosition":"-48px -64px","img":"./skin/topIcons/icon02.png"},
+	
+	{ "id":"201", "parentId":"2", "name":"人员列表","url":"../../sample_skin/normal/user-list.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-48px -64px"},
+	{ "id":"202", "parentId":"2", "name":"部门维护","url":"../../sample_skin/normal/nav-management.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-50px 0px"},	
+	{ "id":"203", "parentId":"2", "name":"用户管理","url":"../../sample_skin/normal/user-management.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"0px -64px"},
+	{ "id":"204", "parentId":"2", "name":"列表与卡片模式","url":"../../sample_skin/normal/grid-card.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-81px -113px"},
+	{ "id":"205", "parentId":"2", "name":"列表信息提示","url":"../../sample_skin/normal/grid-celltip.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-64px -31px"},
+	{ "id":"206", "parentId":"2", "name":"表头排序定制","url":"../../sample_skin/normal/grid-columnsort.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-97px -32px"},
+	{ "id":"207", "parentId":"2", "name":"条件筛选","url":"../../sample_skin/normal/grid-condition.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-18px -32px"},
+	{ "id":"208", "parentId":"2", "name":"父子表","url":"../../sample_skin/normal/grid-detailgrid.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-206px -96px"},
+	{ "id":"209", "parentId":"2", "name":"表头过滤","url":"../../sample_skin/normal/grid-headfilter.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-207px -32px"},
+	{ "id":"210", "parentId":"2", "name":"多表头","url":"../../sample_skin/normal/grid-multiheader.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-64px -80px"},
+	{ "id":"211", "parentId":"2", "name":"数据分组汇总","url":"../../sample_skin/normal/grid-summary.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-97px -64px"},
+	{ "id":"212", "parentId":"2", "name":"树形列表","url":"../../sample_skin/normal/grid-treegrid.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"0px -32px"},
+	{ "id":"213", "parentId":"2", "name":"双表显示","url":"../../sample_skin/normal/grid-twogrid.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-48px -48px"},
+
+	{ "id":"1", "parentId":"0", "name":"表单", "isParent": "true","icon": "./skin/index_icon.png","backgroundPosition":"-111px -48px","img":"./skin/topIcons/icon01.png"},	
+	{ "id":"101", "parentId":"1", "name":"表单验证","url":"../../sample_skin/normal/form-validation.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-111px -48px"},
+	{ "id":"102", "parentId":"1", "name":"表单分步填写","url":"../../sample_skin/normal/form-step.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-208px -64px"},
+	{ "id":"103", "parentId":"1", "name":"表单响应式布局","url":"../../sample_skin/normal/form-layout.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-178px -64px"},
+	
+
+	
+	{ "id":"3", "parentId":"0", "name":"导航", "isParent": "true","icon": "./skin/index_icon.png","backgroundPosition":"-180px 0px","img":"./skin/topIcons/icon03.png"},
+	
+	{ "id":"301", "parentId":"3", "name":"一级纵向导航", "url":"../../sample_skin/normal/v-single.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-178px -64px"},
+	{ "id":"302", "parentId":"3", "name":"纵向滚动导航", "url":"../../sample_skin/normal/v-single-scroll.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-178px -64px"},
+	{ "id":"303", "parentId":"3", "name":"二级纵向导航", "url":"../../sample_skin/normal/v-double.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-178px -64px"},
+	{ "id":"304", "parentId":"3", "name":"动态选项卡导航", "url":"../../sample_skin/normal/v-dynamictab.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-178px -64px"},
+	{ "id":"305", "parentId":"3", "name":"基本选项卡导航", "url":"../../sample_skin/normal/h-basictab.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-178px -64px"},
+	{ "id":"306", "parentId":"3", "name":"流程选项卡导航", "url":"../../sample_skin/normal/h-processtab.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-178px -64px"},
+	{ "id":"307", "parentId":"3", "name":"九宫格导航", "url":"../../sample_skin/normal/icon-grid.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-178px -64px"},
+
+		
+
+	
+	
+	{ "id":"4", "parentId":"0", "name":"特效", "isParent": "true","icon": "./skin/index_icon.png","backgroundPosition":"-122px -97px","img":"./skin/topIcons/icon04.png"},
+
+	
+	{ "id":"401", "parentId":"4", "name":"图片列表", "url":"../../sample_skin/normal/pic-list.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-131px 0px"},
+	{ "id":"402", "parentId":"4", "name":"相册", "url":"../../sample_skin/normal/pic-gallery.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"0px -96px"},
+	{ "id":"403", "parentId":"4", "name":"图片轮播", "url":"../../sample_skin/normal/pic-swiper.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-0px -96px"},
+	{ "id":"404", "parentId":"4", "name":"瀑布流", "url":"../../sample_skin/normal/pic-waterfall.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"0px -96px"},
+	{ "id":"405", "parentId":"4", "name":"拖放与接收", "url":"../../sample_skin/normal/drag-drop.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-34px -112px"},
+	{ "id":"406", "parentId":"4", "name":"图标排序", "url":"../../sample_skin/normal/drag-sort.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-147px 0px"},
+	{ "id":"407", "parentId":"4", "name":"列表排序", "url":"../../sample_skin/normal/drag-sort-list.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-165px 0px"},
+	
+	
+	
+	{ "id":"5", "parentId":"0", "name":"图形化", "isParent": "true","icon": "./skin/index_icon.png","backgroundPosition":"-207px -80px","img":"./skin/topIcons/icon05.png"},
+	{ "id":"501", "parentId":"5", "name":"控制地图颜色","url":"../../sample_skin/normal/graphical-map1.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-131px -14px"},
+	{ "id":"502", "parentId":"5", "name":"地图标记点","url":"../../sample_skin/normal/graphical-map2.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-131px -14px"},
+	{ "id":"503", "parentId":"5", "name":"切换子地图","url":"../../sample_skin/normal/graphical-map3.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-131px -14px"},
+	{ "id":"504", "parentId":"5", "name":"进度环1","url":"../../sample_skin/normal/graphical-ring.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-173px -97px"},
+	{ "id":"505", "parentId":"5", "name":"进度环2","url":"../../sample_skin/normal/graphical-ring2.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-173px -97px"},
+	{ "id":"506", "parentId":"5", "name":"仪表盘","url":"../../sample_skin/normal/graphical-dashboard.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-173px -97px"},
+	{ "id":"507", "parentId":"5", "name":"进度条1","url":"../../sample_skin/normal/graphical-rect.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-98px -112px"},
+	{ "id":"508", "parentId":"5", "name":"进度条2","url":"../../sample_skin/normal/graphical-rect2.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-98px -112px"},
+	{ "id":"509", "parentId":"5", "name":"时间轴","url":"../../sample_skin/normal/graphical-timeline.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-161px -64px"},
+	{ "id":"510", "parentId":"5", "name":"拓扑图","url":"../../sample_skin/normal/graphical-mindmap.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-207px -96px"},
+	{ "id":"511", "parentId":"5", "name":"关系图","url":"../../sample_skin/normal/graphical-relation.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-207px -96px"},
+	{ "id":"512", "parentId":"5", "name":"鱼骨图","url":"../../sample_skin/normal/graphical-fishbone.html", "target":"frmright","icon": "./skin/index_icon.png","backgroundPosition":"-207px -96px"},
+
+
+
+	{ "id":"6", "parentId":"0", "name":"多级菜单", "isParent": "true","icon": "./skin/index_icon.png","backgroundPosition":"-139px -97px","img":"./skin/topIcons/icon06.png"},
+	
+	{ "id":"601", "parentId":"6", "name":"第二级-1","icon": "./skin/index_icon.png","backgroundPosition":"-148px 0px"},
+	{ "id":"6101", "parentId":"601", "name":"第三级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61011", "parentId":"6101", "name":"第四级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61012", "parentId":"6101", "name":"第四级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61013", "parentId":"6101", "name":"第四级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61014", "parentId":"6101", "name":"第四级-4","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"6102", "parentId":"601", "name":"第三级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61011", "parentId":"6102", "name":"第四级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61012", "parentId":"6102", "name":"第四级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61013", "parentId":"6102", "name":"第四级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61014", "parentId":"6102", "name":"第四级-4","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"6103", "parentId":"601", "name":"第三级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61011", "parentId":"6103", "name":"第四级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61012", "parentId":"6103", "name":"第四级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61013", "parentId":"6103", "name":"第四级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61014", "parentId":"6103", "name":"第四级-4","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"602", "parentId":"6", "name":"第二级-2","icon": "./skin/index_icon.png","backgroundPosition":"-148px 0px"},
+	{ "id":"6201", "parentId":"602", "name":"第三级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61011", "parentId":"6201", "name":"第四级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61012", "parentId":"6201", "name":"第四级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61013", "parentId":"6201", "name":"第四级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61014", "parentId":"6201", "name":"第四级-4","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"6202", "parentId":"602", "name":"第三级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61011", "parentId":"6202", "name":"第四级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61012", "parentId":"6202", "name":"第四级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61013", "parentId":"6202", "name":"第四级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61014", "parentId":"6202", "name":"第四级-4","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"6203", "parentId":"602", "name":"第三级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61011", "parentId":"6203", "name":"第四级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61012", "parentId":"6203", "name":"第四级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61013", "parentId":"6203", "name":"第四级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"61014", "parentId":"6203", "name":"第四级-4","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"603", "parentId":"6", "name":"第二级-3","icon": "./skin/index_icon.png","backgroundPosition":"-148px 0px"},
+	{ "id":"6301", "parentId":"603", "name":"第三级-1","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"6302", "parentId":"603", "name":"第三级-2","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"},
+	{ "id":"6303", "parentId":"603", "name":"第三级-3","icon": "./skin/index_icon.png","backgroundPosition":"-191px -32px"}
+];
+
+var setting = {
+	data: {
+		simpleData: {
+			idKey: "id",
+			pIdKey: "parentId",
+			enable: true
+		},
+		key: {
+			children: "children"
+		}
+	}
+};
+$(function(){
+	initMenuNav(menuData,setting);
+})
+function lockScreen(){
+	top.Dialog.confirm("确定要锁屏吗，锁屏后只有重新输入密码才能解除。",function(){
+		openLockWindow();
+	});
+}
+function openLockWindow(){
+	var diag = new top.Dialog();
+		diag.Title = "系统锁屏";
+		diag.ID = "a1";
+		diag.URL="../../sample_skin/normal/lock.html";
+		diag.Width=350;
+		diag.Height=150;
+		diag.ShowCloseButton=false;
+		diag.ShowCancelButton=false;
+		diag.ShowOkButton=false;
+		diag.ButtonAlign="center";
+		diag.AllowChangeIndex=false;
+		diag.show();
+		diag.addButton("btn1","注销系统",function(){
+			top.Dialog.confirm("确定要退出系统吗",function(){top.Dialog.close();});
+		})
+		diag.addButton("btn2","确定解锁",function(){
+			top.Dialog.close();
+		})
+}
+</script>
+</body>
+</html>

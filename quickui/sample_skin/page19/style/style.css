@@ -1,0 +1,467 @@
+
+
+
+.content_win{
+	padding: 0 10px 10px 0px;
+	/*background: #fff;*/
+	width: 100%;
+}
+.content_win .header{
+	padding: 20px;
+	background: #fff;
+}
+.content_win .header .head_img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+.content_win .header .head_img img{
+	width: 100%;
+}
+
+.content_win .header .head_name{
+	/*border: 1px solid red;*/
+	float: left;
+	padding-left: 20px;
+	margin-top: 20px;
+}
+.content_win .header .head_tel{
+	/*border: 1px solid red;*/
+	float: left;
+	line-height: 40px;
+}
+.content_win .header .head_name>span{
+	font-size: 20px;
+	color: #000000;
+	float: left;
+}
+.content_win .header .head_name .member{
+	display: inline-block;
+	float: left;
+	width: 90px;
+	padding: 0px 10px;
+	height: 18px;
+	background: #F5F5F5;
+	border-radius: 10px;
+	float: left;
+	color: #7E7E7E;
+	font-size: 12px;
+	margin: 5px 10px 0 10px;
+}
+.content_win .header .head_name .member i{
+	display: block;
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-top: 1px;
+	margin-right: 10px;
+}
+.content_win .header .head_name .member span{
+	display: block;
+	line-height: 18px;
+}
+
+.content_win .header .integral{
+	float: left;
+	color: #7E7E7E;
+	font-size: 12px;
+	padding: 30px 0 0 50px;
+}
+.content_win .header .integral .text i{
+	display: block;
+	width: 16px;
+	height: 16px;
+	/*border: 1px solid red;*/
+	float: left;
+	background: url(jifen.png) no-repeat center center;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+.content_win .header .integral .text span{
+	font-size: 12px;
+	float: left;
+	display: block;
+}
+.content_win .header .integral .text span.num{
+	font-size: 24px;
+	color: #FD5406;
+	margin: 0 5px;
+}
+.content_win .header .integral .text p{
+	color: #1088DF;
+	float: left;
+	display: block;
+}
+
+
+
+
+
+.money_tab{
+	width: 98%;
+	margin: auto;
+	padding: 10px 0;
+	border-bottom: 5px solid #F9F9F9;
+}
+.money_tab ul{}
+.money_tab ul li{
+	float: left;
+	padding: 0px 50px;
+	border-right: 1px solid #E8E8E8;
+}
+.money_tab ul li i{
+	display: block;
+	width: 18px;
+	height: 18px;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.money_tab ul li p{
+	display: block;
+	float: left;
+}
+.money_tab ul li p span{
+	color: #FE782B;
+}
+
+
+.information{
+	padding: 30px 0;
+}
+.card_information{
+	border: 1px solid #EEEEEE;
+	border-top: 0;
+}
+.information .card_information li{
+	color: #313131;
+	font-weight: bold;
+	line-height: 40px;
+	padding: 0px 15px;
+}
+.information .card_information li.title{
+	background: #1088DF;
+	color: #fff;
+}
+.information .card_information li p{
+	color: #939393;
+	font-weight: 400;
+}
+.information .card_information li span{
+	color: #313131;
+}
+.card_information li .new_p{
+	height: 10px;
+	border-bottom: 2px solid #eee;
+	margin-bottom: 20px;
+}
+.card_information li .new_p span{
+	display: block;
+	width: 90px;
+	line-height: 25px;
+	background: #fff;
+	margin: auto;
+	text-align: center;
+}
+.card_information li.active{
+	padding: 20px 10px;
+}
+.card_information li.active img{
+	display: block;
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+.card_information li.active .text{
+	float: left;
+	padding-left: 20px;
+}
+.card_information li.active .text .title{
+	font-size: 16px;
+	text-indent: 0;
+	line-height: 30px;
+}
+.card_information li.active .text p{
+	line-height: 25px;
+}
+.card_information li.active a{
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 50px;
+	color: #1088DF;
+}
+
+.information .title{
+	display: block;
+	color: #313131;
+	font-weight: bold;
+	line-height: 40px;
+	text-indent: 2em;
+}
+.information .money{
+	float: left;
+	width: 230px;
+	border-right: 1px solid #E8E8E8;
+	margin-left: 28px;
+}
+.information .money p{
+	color: #939393;
+}
+.information .money span{
+	font-size: 24px;
+	line-height: 40px;
+	color: #EC3722;
+}
+.information .money_bottom{
+	width: 98%;
+	margin: auto;
+	height: 20px;
+	border-bottom: 1px solid #EEEEEE;
+	/*background: url(money_bottom.png) no-repeat 0 100%;*/
+	position: relative;
+}
+.information .money_bottom i{
+	position: absolute;
+	bottom: -2px;
+	left: 100px;
+	display: block;
+	width: 9px;
+	height: 13px;
+	/*border-bottom: 1px solid #EEEEEE;*/
+	background: #fff url(stair_icon_up.png) no-repeat -6px 0;
+}
+.information .money_information{
+	float: left;
+	/*border: 1px solid red;*/
+	margin: 60px 0 0 100px;
+}
+
+.information .money_information li{
+	height: 40px;
+}
+.information .money_information li b{
+	display: block;
+	width: 20px;
+	height: 10px;
+	background: #FE7A25;
+	float: left;
+	margin-top: 8px;
+}
+.information .money_information li span{
+	font-size: 12px;
+	color: #A5A5A5;
+	margin-left: 10px;
+	float: left;
+}
+.information .profit{
+	/*border: 1px solid red;*/
+}
+.information .profit li{
+	float: left;
+    width: 230px;
+    height: 40px;
+    border-right: 1px solid #E8E8E8;
+    margin-left: 28px;	
+    padding-top: 20px;
+}
+.information .profit li i{
+	display: block;
+	width: 18px;
+	height: 18px;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+	background: url(profit02.png) no-repeat center center;
+}
+.information .profit li p{
+	color: #939393;
+}
+.information .profit li p span{
+	color: #ED2211;
+}
+
+
+
+/*个性页面1*/
+
+
+.Open_content{
+	padding: 20px;
+	background: #fff;
+}
+.Open_content .list_win{
+	width: 1000px;
+	margin: auto;
+	/*border: 1px solid red;*/
+	padding-top: 30px;
+}
+.Open_content .list_win .list_content{
+	width: 300px;
+	border: 1px solid #F3F3F3;
+	padding: 30px;
+	float: left;
+}
+.Open_content .list_win .list_content>img{
+	display: block;
+	width: 120px;
+	height: 120px;
+	margin: 20px auto;
+}
+.Open_content .list_win .list_content>.title{
+	height: 30px;
+	/*border-bottom: 1px solid #f3f3f3;*/
+	background: url(title.png) no-repeat center center;
+	text-align: center;
+	font-size: 16px;
+	color: #533A58;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.Open_content .list_win .list_content>p{
+	text-align: center;
+	display: block;
+	height: 40px;
+}
+.Open_content .list_win .list_content .ready{
+	margin-top: 20px;
+}
+.Open_content .list_win .list_content .ready>p{
+	line-height: 20px;
+	border-left: 3px solid #FF6000;
+	padding-left: 5px;
+}
+.Open_content .list_win .list_content .ready .prove{
+	width: 200px;
+	/*border: 1px solid red;*/
+	margin: auto;
+	padding: 20px 0;
+}
+.Open_content .list_win .list_content .ready .prove2{
+	width: 300px;
+}
+.Open_content .list_win .list_content .ready .prove .left,
+.Open_content .list_win .list_content .ready .prove .right{
+	float: left;
+	width: 100px;
+}
+.Open_content .list_win .list_content .ready .prove .right{
+	float: right;
+}
+.Open_content .list_win .list_content .ready .prove img{
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: auto;
+}
+.Open_content .list_win .list_content .ready .prove span{
+	display: block;
+	text-align: center;
+	line-height: 30px;
+}
+.Open_content .list_win .list_content .ready .prove p{
+	display: block;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+.Open_content .list_win .list_content .ready a{
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	background: #FF6100;
+	color: #fff;
+	text-align: center;
+}
+.security{
+	background: #FAFAFA;
+	padding: 15px;
+	width: 95%;
+	margin: 20px auto;
+}
+.security .show{
+	float: left;
+	width: 120px;
+	height: 120px;
+	/*border: 1px solid red;*/
+}
+.security .text{
+	float: left;
+	/*border: 1px solid red;*/
+	margin-left: 30px;
+	margin-top: 30px;
+}
+.security .text p{
+	line-height: 30px;
+}
+.security .text p span{
+	color: #FD7018;
+}
+
+
+/*个性三*/
+
+.condition_win{
+	padding: 20px;
+}
+.condition_win .top{
+	padding: 30px 10px;
+	border-bottom: 1px solid #EDEDED;
+}
+.condition_win .top table td .crevice{
+	width: 30px;
+}
+.condition_win .center{
+	padding: 30px 0;
+	color: #525252;
+}
+.condition_win .center .money{
+	height: 70px;
+	border-bottom: 1px solid #EDEDED;
+	
+	padding-left: 10px;
+}
+.condition_win .center .money .no_bor{
+	border-right: 0px;
+}
+.condition_win .center .title{
+	display: block;
+	line-height: 50px;
+	position: relative;
+}
+.condition_win .center .title i{
+	display: block;
+	width: 50px;
+	line-height: 20px;
+	color: #fff;
+	border-radius: 10px;
+	background: #1789E4;
+	font-style:normal;
+	font-size:12px;
+	text-align: center;
+	position: absolute;
+	top: 15px;
+	right: 30px;
+}
+.condition_win .center .money p{
+	border-right: 1px solid #EAEAEA;
+}
+.condition_win .center .money>span{
+	font-size: 16px;
+	color: #525252;
+	font-weight: bold;
+	display: block;
+	border-right: 1px solid #EAEAEA;
+}
+.condition_win .center .money .primary{
+	margin-top: 15px;
+}
+.condition_win .center .title span{
+	font-size: 16px;
+	color: #525252;
+	font-weight: bold;
+}

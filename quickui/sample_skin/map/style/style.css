@@ -1,0 +1,198 @@
+.Content_win{
+	padding: 10px;
+	width: 227px;
+	border: 1px solid #E1E3E5;
+	border-top: 0px solid #E1E3E5;
+	background: #fff;
+}
+.car {
+	padding: 10px 0;
+}
+.car a{
+	color: #298CEF;
+	text-decoration: underline;
+	float: left;
+}
+.car input{
+	*padding-left: 10px;
+	*padding-right: 10px;
+}
+.car .find_car{
+	background: #298CEF;
+	border-color: #298CEF;
+	color: #fff;
+	border-radius: 2px;
+	float: right;
+	margin: 0;
+}
+.car .find_car:hover{
+	background: #5aadff;
+	border-color: #5aadff;
+}
+.car_show {
+	padding: 5px;
+	background: #F5F7FA;
+	margin: 10px 0;
+	border-radius: 3px;
+}
+.car_show p{
+	font-size: 12x;
+	line-height: 20px;
+}
+.car_show p span{
+	color: #298CEF;
+}
+.car_license{}
+.car_license li{
+	padding: 10px 0;
+	margin-top: 10px;
+	border: 1px solid #E1E3E5;
+	border-left: 0;
+	border-right: 0;
+}
+.car_license li>p{
+	line-height: 20px;
+}
+.car_license li .icon_title{}
+.car_license li .icon_title span{
+	display: block;
+	float: left;
+	text-indent: 2em;
+	color: #298CEF;
+	background: url(bus.png) no-repeat 5px center;
+}
+.car_license li .icon_title .left{
+	float: right;
+	width: 120px;
+	margin-top: 5px;
+}
+.car_license li .icon_title .left i{
+	display: block;
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin: 0 5px;
+	/*border: 1px solid red;*/
+	background: url(eye.png) no-repeat center center;
+}
+.car_license li .icon_title .left i.operation2{
+	background: url(camera.png) no-repeat center center;
+}
+.car_license li .icon_title .left i.operation3{
+	background: url(information.png) no-repeat center center;
+}
+.car_license li .icon_title .left i.operation4{
+	background: url(Photograph.png) no-repeat center center;
+}
+
+.car_license li .icon_title .left b{
+	display: block;
+	width: 1px;
+	height: 16px;
+	background: #E1E4E6;
+	margin: 0 5px;
+	float: left;
+	
+}
+.car_title{
+	/*padding: 0 0px 0 10px;*/
+	/*background: #298CEF;*/
+	margin-bottom: 10px;
+}
+.car_title span{
+	display: block;
+	float: left;
+	/*color: #fff;*/
+	width: 100px;
+	line-height: 30px;
+}
+.car_title i{
+	display: block;
+	width: 30px;
+	height: 30px;
+	float: right;
+	/*margin-top: 8px;*/
+	cursor: pointer;
+	background: url(close.png) no-repeat center center;
+}
+
+
+
+
+/*弹窗*/
+
+
+
+
+
+
+
+.open_win .left{
+	width: 75px;
+	height: 260px;
+	/*background: red;*/
+}
+.open_win .left span{
+	display: block;
+	/*width: 100%;*/
+	border: 1px solid #E1E3E5;
+	border-top: 0;
+	line-height: 44px;
+	border-left: 2px solid transparent;
+	text-indent: 2em;
+	cursor: pointer;
+}
+.open_win .left span:hover,
+.open_win .left span.active{
+	color: #298CEF;
+	border-left: 2px solid #298CEF;
+}
+
+.open_win .right{
+	height: 260px;
+	/*background: blue;*/
+	padding: 10px;
+}
+.send_out{
+	
+}
+.open_win .right ul li{
+	border-bottom: 1px dotted #E1E3E5;
+	padding: 10px 0;
+}
+.open_win .right ul li p{
+	line-height: 25px;
+}
+.open_win .right ul li span{
+	line-height: 25px;
+}
+.open_win .right ul li p span{
+	float: right;
+}
+.open_win .right ul li p span.success{
+	color: #34CB89;
+}
+.open_win .right ul li p span.error{
+	color: #E54D4D;
+}
+.list_content_title{
+	background: #2DA9FA;
+	padding: 10px 10px;
+}
+.list_content_title .left{
+	float: left;
+}
+.list_content_title .left span{
+	display: block;
+	width: 100px;
+	line-height: 30px;
+	color: #fff;
+}
+.list_content_title .right{
+	float: right;
+}
+.list_content_title .right .listClose{
+	background: #E85B56;
+	border-color: #E85B56;
+	color: #fff;
+}

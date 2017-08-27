@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<!--框架必需start-->
+		<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+		<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+		<script type="text/javascript" src="../../libs/js/framework.js"></script>
+		<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" id="skin" prePath="../../" />
+		<link rel="stylesheet" type="text/css" id="customSkin" />
+		<!--框架必需end-->
+		<script src="../../libs/js/graphical/raphael.js" type="text/javascript"></script>
+		<script src="../../libs/js/graphical/popup.js" type="text/javascript"></script>
+		<script src="js/chart1.js" type="text/javascript"></script>
+		<script src="js/progress.js" type="text/javascript"></script>
+		<script src="../../libs/js/graphical/jquery.rotate.min.js" type="text/javascript"></script>
+		<!-- 日期选择框start -->
+		<script type="text/javascript" src="../../libs/js/form/datePicker/WdatePicker.js"></script>
+		<!-- 日期选择框end -->
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<style type="text/css">
+			body {
+				background: #F4F4F4;
+			}
+			
+			#holder1 {
+				position: relative;
+				width: 860px;
+				height: 240px;
+				/*margin: 10px auto;*/
+				float: left;
+			}
+			
+			.rect_text1 {
+				position: absolute;
+				top: 25px;
+				left: 30px;
+			}
+			
+			
+			.rect_text3 {
+				position: absolute;
+				top: 85px;
+				left: 30px;
+			}
+			
+			
+			.rect_text5 {
+				position: absolute;
+				top: 145px;
+				left: 30px;
+			}
+			.rect_text6 {
+				position: absolute;
+				top: 205px;
+				left: 30px;
+			}
+			 #holder0 {
+                position: relative;
+                width: 185px;
+                height: 280px;
+                float: left;
+                /*margin-left: 100px;*/
+                /*margin:50px auto;*/
+            }
+            .hold_win{
+            	width: 90px;
+                height: 90px;
+            	position: absolute;
+            	top: 50%;
+            	left: 50%;
+            	margin: -45px 0 0 -48px;
+            }
+            #holder01 {
+                position: relative;
+                width: 90px;
+                height: 90px;
+                /*margin:50px auto;*/
+            }
+            #holder01 span{
+            	display: block;
+            	width: 28px;
+            	height: 28px;
+            	font-size: 35px;
+            	color: #2EAAFA;
+            	text-align: center;
+            	line-height: 28px;
+            	position: absolute;
+            	top: 50%;
+            	left: 50%;
+            	margin: -14px 0 0 -14px;
+            }
+		    .ring_text1{
+		        position: absolute;
+		        top:140px;
+		        left: 400px;
+		        font-size: 16px;
+		        width: 160px;
+		        text-align: center;
+		       
+		    }
+		    .dashBg1 ,
+		    .dashBg2 ,
+		    .dashBg3 ,
+		    .dashBg4 {
+		        width: 50px;
+		        height: 25px;
+		        background-image: url(style/dash_bg2.png);
+				background-repeat: no-repeat;
+				/*margin:50px auto;*/
+				position: relative;
+				overflow: hidden;
+				float: left;
+				margin: 20px 0px 0 30px;
+		    }
+		    .dashBg2 {
+		    	margin-top: 35px;
+		    	background-image: url(style/dash_bg3.png);
+		    }
+		     .dashBg3 {
+		    	margin-top: 35px;
+		    	background-image: url(style/dash_bg4.png);
+		    }
+		     .dashBg4 {
+		    	margin-top: 35px;
+		    	background-image: url(style/dash_bg5.png);
+		    }
+		    .dashPointer1 ,
+		    .dashPointer2 ,
+		    .dashPointer3 ,
+		    .dashPointer4 {
+		        width: 50px;
+		        height: 50px;
+				position: absolute;
+				left: 0px;
+				top:0px;
+		    }
+		    .timeline{
+		    	width: 500px;
+		    	margin: 30px 0 0 50px;
+		    	float: left;
+		    }
+		    .timeline ul li .intro{
+		    	width: 300px;
+		    }
+		    .timeline ul li.circle1 {
+			    background: url(style/circle1.png) no-repeat 91px 0px;
+			}
+			.timeline ul li.circle2 {
+			     background: url(style/circle2.png) no-repeat 91px 0px;
+			}
+			.timeline ul li.circle3 {
+			     background: url(style/circle3.png) no-repeat 91px 0px;
+			}
+			.timeline ul li.circle4 {
+			     background: url(style/circle4.png) no-repeat 91px 0px;
+			}
+			#div1{
+				float: left;
+				width: 400px;
+			}
+			#div1 iframe{
+				width: 400px!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="Content_win">
+			<div class="content_left">
+				
+
+				<!--对比分析-->
+				<div class="Contrast_win" style="">
+					<div class="title">
+						待办事宜
+					</div>
+					<div id="holder0">
+						<div class="hold_win">
+							<div id="holder01"><span>7</span></div>
+						</div>
+						
+					</div>
+					<div class="thing_title">
+						<span style="background-image: url(style/holder01.png);">特急（3）</span>
+						<span style="background-image: url(style/holder02.png);">紧急（3）</span>
+						<span style="background-image: url(style/holder03.png);">一般（1）</span>
+						<div class="clear"></div>
+					</div>
+					<ul>
+						<li class="thing1">
+							<span>处理项目评估事项</span>
+							<span>内部流程梳理</span>
+							<span>书写岗位职责规范第一稿</span>
+						</li>
+						<li class="thing2">
+							<span>处理项目评估事项</span>
+							<span>内部流程梳理</span>
+							<span>书写岗位职责规范第一稿</span>
+						</li>
+						<li class="thing3">
+							<span>处理项目评估事项</span>
+							
+						</li>
+					</ul>
+				</div>
+				<!--工作统计-->
+				<div class="Contrast_win" style="margin-left: 20px;">
+					<div class="title">
+						工作统计
+					</div>
+					<div id="holder"></div>
+				</div>
+				
+				<!--项目完成进度-->
+				<div class="Contrast_win" style="width: 100%;">
+					<div class="title">
+						项目完成进度
+					</div>
+					<div class="" style="width: 940px;">
+						<div id="holder1">
+							<div class="rect_text1">CRM系统</div>
+							<div class="rect_text3">汽车维修系统</div>
+							<div class="rect_text5">健康医疗</div>
+							<div class="rect_text6">聚赢家理财</div>
+							<span class="rect_text1" style="left: 800px;">距离结项</span>
+							<span class="rect_text3" style="left: 800px;">距离结项</span>
+							<span class="rect_text5" style="left: 800px;">距离结项</span>
+							<span class="rect_text6" style="left: 800px;">距离结项</span>
+						</div>
+						<!--<span class="rect_text1">距离结项</span>-->
+						<div class="dashBg1">
+							<img class="dashPointer1" src="style/dash_pointer3.png"/>
+						</div>
+						<!--<span style="">距离结项</span>-->
+						<div class="dashBg2">
+							<img class="dashPointer2" src="style/dash_pointer3.png"/>
+						</div>
+						<div class="dashBg3">
+							<img class="dashPointer3" src="style/dash_pointer3.png"/>
+						</div>
+						<div class="dashBg4">
+							<img class="dashPointer4" src="style/dash_pointer3.png"/>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!--日程安排-->
+				<div class="Contrast_win" style="width: 100%;">
+					<div class="title">
+						日程安排
+					</div>
+					<div class="timeline">
+						<ul>
+							<li class="cls circle1">
+								<p class="date_time">9月1日</p>
+								<p class="intro">Quick UI2.0正式上线</p>
+							</li>
+							<li class="cls circle2">
+								<p class="date_time">8月1日</p>
+								<p class="intro">Quick UI2.0 内测开始</p>
+							</li>
+							<li class="cls circle3">
+								<p class="date_time">7月1日</p>
+								<p class="intro">新版本皮肤包完成</p>
+							</li>
+							<li class="cls circle4">
+								<p class="date_time">6月1日</p>
+								<p class="intro">Quick UI 正式上线</p>
+							</li>
+						</ul>
+					</div>
+					<div id="div1"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+
+		<script type="text/javascript">
+			function showToast1(text) {
+				top.Toast('showNoticeToast', text);
+			}
+
+			
+			$(function() {
+				
+				var paramBg1 = {
+					stroke: "#ebf1f7",
+					"stroke-width": 8
+				};
+				var paramBlue1 = {
+					stroke: "#2FADFA",
+					"stroke-width": 8
+				};
+				var paramGreen1 = {
+					stroke: "#64CA0B",
+					"stroke-width": 8
+				};
+				var paramYellow1 = {
+					stroke: "#F57C21",
+					"stroke-width": 8
+				};
+				var paramBlue1_1 = {
+					stroke: "#3399FF",
+					"stroke-width": 8
+				};
+				
+				var radius = 60;
+				var radius01 = 30;
+				var color_val='#2DA9FA';
+//			    if(themeColor=="royal_blue"){
+//			    	color_val='#649BF6';
+//			    }else if(themeColor=="blue"){
+//			    	color_val='#2DA9FA';
+//			    }else if(themeColor=="cornflower_blue"){
+//			    	color_val='#609EE9';
+//			    }else if(themeColor=="grass_green"){
+//			    	color_val='#63BF5C';
+//			    }else if(themeColor=="green"){
+//			    	color_val='#1fc695';
+//			    }else if(themeColor=="navy_blue"){
+//			    	color_val='#2D3244';
+//			    }else if(themeColor=="sky_blue"){
+//			    	color_val='#6bc1f2';
+//			    }else if(themeColor=="sky_blue_plus"){
+//			    	color_val='#6bc1f2';
+//			    };
+	
+			    var param1 = {stroke: color_val, "stroke-width": 40};
+			    var param2 = {stroke: "#64CA0B", "stroke-width": 35};
+			    var param3 = {stroke: "#F57C21", "stroke-width": 30};
+			    
+			    var param01 = {stroke: color_val, "stroke-width": 4};
+			    var param02 = {stroke: "#64CA0B", "stroke-width": 4};
+			    var param03 = {stroke: "#F57C21", "stroke-width": 4};
+				
+					
+					
+				
+				
+				
+				var paper =initPaper("holder0", 180, 280);   
+		        //paper,current1,current2,current3,min,max,cx,cy,radius,param1,param2,param3
+		        drawRingProgress2(paper,40,30,30,0,100,90,140,radius,param1,param2,param3);
+				
+				var paper01 =initPaper("holder01", 90, 90);
+		        //paper,current1,current2,current3,min,max,cx,cy,radius,param1,param2,param3
+		        drawRingProgress2(paper01,40,30,30,0,100,45,45,radius01,param01,param02,param03);
+				
+				
+				
+				
+				var rectWidth = 500;
+				var paper1 = initPaper("holder1", 700, 260);
+				//										左	上
+				drawRectProgress(paper1, 25, 0, 100, 130, 40, rectWidth, paramBlue1, paramBg1);
+				drawRectProgress(paper1, 70, 0, 100, 130, 100, rectWidth, paramGreen1, paramBg1);
+				drawRectProgress(paper1, 50, 0, 100, 130, 160, rectWidth, paramYellow1, paramBg1);
+				drawRectProgress(paper1, 90, 0, 100, 130, 220, rectWidth, paramBlue1_1, paramBg1);
+				
+
+				$('.dashPointer1').rotate({animateTo:265});
+				$('.dashPointer2').rotate({animateTo:305});
+				$('.dashPointer3').rotate({animateTo:335});
+				$('.dashPointer4').rotate({animateTo:350});
+				
+				
+				
+				
+				//获取当前主题风格，用于设置日期控件的皮肤
+				var dateSkin = "white";
+				//平面显示
+				WdatePicker({
+					skin: dateSkin,
+					eCont: 'div1',
+					onpicked: function(dp) {
+						top.Toast("showNoticeToast", '你选择的日期是:' + dp.cal.getDateStr())
+					}
+				})
+				
+			})
+			
+
+			function initComplete() {
+				
+			}
+
+		</script>
+	</body>
+
+</html>

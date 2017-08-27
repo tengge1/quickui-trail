@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<!--框架必需start-->
+		<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+		<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+		<script type="text/javascript" src="../../libs/js/framework.js"></script>
+		<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" id="skin" prePath="../../" />
+		<link rel="stylesheet" type="text/css" id="customSkin" />
+		<!--框架必需end-->
+		
+		<!--<script src="js/highcharts.js"></script>-->
+		
+		<script src="../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<style type="text/css">
+			
+			body{
+				background: transparent;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="Content_wrap">
+			<div class="title">
+				<span class="text">Dashboard</span>
+				<div class="Add">Add New Version</div>
+				<div class="clear"></div>
+			</div>
+			<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+				<tr>
+					<td style="width: 50%;">
+						<div class="line_content" style="padding-right: 10px;">
+							<div class="content_cont">
+								<div class="title">
+									<span>Revenue</span>
+									<ul>
+										<li>1D</li>
+										<li>1W</li>
+										<li>1M</li>
+										<li>ALL</li>
+									</ul>
+									<div class="clear"></div>
+								</div>
+								<p class="data">$2,894 <span>&uarr; +10%</span></p>
+								<div id="container1" style="width: 100%; height: 255px; margin: 0 auto"></div>
+							</div>
+						</div>
+					</td>
+					<td style="width: 50%;">
+						<div class="line_content" style="padding-left: 10px;">
+							<div class="content_cont">
+								<div class="title">
+									<span>Revenue</span>
+									<ul>
+										<li>1D</li>
+										<li>1W</li>
+										<li>1M</li>
+										<li>ALL</li>
+									</ul>
+									<div class="clear"></div>
+								</div>
+								<p class="data">5,324 <span>11/06/2017</span></p>
+								<div id="container2" style="width: 100%; height: 255px; margin: 0 auto"></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 50%;">
+						<div class="line_content" style="padding-right: 10px;">
+							<div class="content_cont">
+								<div class="title">
+									<span>Revenue</span>
+									<ul>
+										<li>CURRENT VERSION</li>
+										<li>ALL</li>
+									</ul>
+									<div class="clear"></div>
+								</div>
+								<div id="container3" style="width: 100%; height: 310px; margin: 0 auto"></div>
+							</div>
+						</div>
+					</td>
+					<td style="width: 50%;">
+						<div class="line_content" style="padding-left: 10px;">
+							<div class="content_cont">
+								<div class="title">
+									<span>Subscriptions & Downloads</span>
+									<ul>
+										<li>1D</li>
+										<li>1W</li>
+										<li>1M</li>
+										<li>ALL</li>
+									</ul>
+									<div class="clear"></div>
+								</div>
+								<p class="data">
+									<input type="radio" id="male-1" name="sex-1" value="Subscriptions" /><label for="male-1" class="hand" style="font-size: 14px;">Subscriptions</label>
+									<input type="radio" id="female-1" name="sex-1" value="Downloads" /><label for="female-1" class="hand" style="font-size: 14px;">Downloads</label>
+								</p>
+								<div id="container4" style="width: 100%; height: 255px; margin: 0 auto"></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="clear"></div>
+		</div>
+		
+	<script type="text/javascript">
+		$(function () {
+	        $('#container1').highcharts({
+	            chart: {
+	                type: 'areaspline'
+	            },
+	            title: {
+	                text: ''
+	            },
+	            legend: {
+	                layout: 'vertical',
+	                align: 'left',
+	                verticalAlign: 'top',
+	                x: 150,
+	                y: 100,
+	                floating: true,
+	                borderWidth: 1,
+	                backgroundColor: '#FFFFFF',
+	                 enabled:false
+	            },
+	            xAxis: {
+	                categories: [
+	                    '星期一',
+	                    '星期二',
+	                    '星期三',
+	                    '星期四',
+	                    '星期五',
+	                    '星期六',
+	                    '星期日'
+	                ]
+	            },
+	            yAxis: {
+	                title: {
+	                    text: ''
+	                }
+	            },
+	            tooltip: {
+	                shared: true,
+	                valueSuffix: 'K'
+	            },
+	            credits: {
+	                enabled: false
+	            },
+	            plotOptions: {
+	                areaspline: {
+	                    fillOpacity: 0.5
+	                }
+	            },
+	            series: [{
+	                name: '北京',
+	                data: [3, 4, 3, 5, 4, 10, 12]
+	            }],
+	            colors:["#6CB3D9"]
+	        });
+	        $('#container2').highcharts({
+	            chart: {
+	                type: 'areaspline'
+	            },
+	            title: {
+	                text: ''
+	            },
+	            legend: {
+	                layout: 'vertical',
+	                align: 'left',
+	                verticalAlign: 'top',
+	                x: 150,
+	                y: 100,
+	                floating: true,
+	                borderWidth: 1,
+	                backgroundColor: '#FFFFFF',
+	                 enabled:false
+	            },
+	            xAxis: {
+	                categories: [
+	                    '星期一',
+	                    '星期二',
+	                    '星期三',
+	                    '星期四',
+	                    '星期五',
+	                    '星期六',
+	                    '星期日'
+	                ]
+	            },
+	            yAxis: {
+	                title: {
+	                    text: ''
+	                }
+	            },
+	            tooltip: {
+	                shared: true,
+	                valueSuffix: 'K'
+	            },
+	            credits: {
+	                enabled: false
+	            },
+	            plotOptions: {
+	                areaspline: {
+	                    fillOpacity: 0.5
+	                }
+	            },
+	            series: [{
+	                name: '上海',
+	                data: [3, 4, 3, 5, 4, 10, 12]
+	            }],
+	            colors:["#6CB3D9"]
+	        });
+	        
+	        $('#container3').highcharts({
+	            chart: {
+	                type: 'bar'
+	            },
+	            title: {
+	                text: ''
+	            },
+	            subtitle: {
+	                text: ''
+	            },
+	            xAxis: {
+	                categories: ['5', '4', '3', '2', '1'],
+	                title: {
+	                    text: null
+	                }
+	            },
+	            yAxis: {
+	                min: 0,
+	                title: {
+	                    text: '	',
+	                    align: 'high'
+	                },
+	                labels: {
+	                    overflow: 'justify'
+	                }
+	            },
+	            tooltip: {
+	                valueSuffix: ' 百万'
+	            },
+	            plotOptions: {
+	                bar: {
+	                    dataLabels: {
+	                        enabled: true
+	                    }
+	                }
+	            },
+	            legend: {
+	                layout: 'vertical',
+	                align: 'right',
+	                verticalAlign: 'top',
+	                x: -40,
+	                y: 100,
+	                floating: true,
+	                borderWidth: 1,
+	                backgroundColor: '#FFFFFF',
+	                shadow: true,
+	                enabled:false
+	            },
+	            credits: {
+	                enabled: false
+	            },
+	            series: [{
+	                name: '2017年',
+	                data: [107, 31, 635, 203, 2]
+	            }],
+	            colors:["#6CB3D9"]
+	        });
+			$('#container4').highcharts({
+	            chart: {
+	                type: 'column',
+					 zoomType: 'x'
+	            },
+	            title: {
+	                text: ''
+	            },
+	            xAxis: {
+	                categories: [
+	                    '11/16',
+	                    '11/17',
+	                    '11/18',
+	                    '11/19',
+	                    '11/20',
+	                    '11/21',
+	                    '11/22'
+	                ]
+	            },
+	            yAxis: {
+	                min: 0,
+	                title: {
+	                    text: ''
+	                }
+	            },
+	            tooltip: {
+	                headerFormat: '<span>{point.key}</span><table>',
+	                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	                    '<td style="padding:0"><b>{point.y:.1f} k</b></td></tr>',
+	                footerFormat: '</table>',
+	                shared: true,
+	                useHTML: true
+	            },
+	            plotOptions: {
+	                column: {
+	                    pointPadding: 0.2,
+	                    borderWidth: 0
+	                }
+	            },
+	            legend: {
+	            	enabled:false
+	            },
+	            series: [{
+	                name: '北京',
+	                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6]
+	    
+	            }, {
+	                name: '上海',
+	                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0]
+	    
+	            }],
+	            colors:["#6CB3D9","#8DE06F"]
+       		});
+
+    	});
+
+	</script>
+	</body>
+
+</html>

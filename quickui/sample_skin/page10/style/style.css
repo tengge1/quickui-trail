@@ -1,0 +1,190 @@
+
+
+
+.content_win{
+	padding: 0 10px 10px 0px;
+	/*background: #fff;*/
+	width: 100%;
+}
+.content_win .header{
+	padding: 20px;
+	background: #fff;
+}
+.content_win .header .head_img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+.content_win .header .head_img img{
+	width: 100%;
+}
+
+.content_win .header .head_name{
+	/*border: 1px solid red;*/
+	float: left;
+	padding-left: 20px;
+	margin-top: 20px;
+}
+.content_win .header .head_tel{
+	/*border: 1px solid red;*/
+	float: left;
+	line-height: 40px;
+}
+.content_win .header .head_name>span{
+	font-size: 20px;
+	color: #000000;
+	float: left;
+}
+.content_win .header .head_name .member{
+	display: inline-block;
+	float: left;
+	width: 90px;
+	padding: 0px 10px;
+	height: 18px;
+	background: #F5F5F5;
+	border-radius: 10px;
+	float: left;
+	color: #7E7E7E;
+	font-size: 12px;
+	margin: 5px 10px 0 10px;
+}
+.content_win .header .head_name .member i{
+	display: block;
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-top: 1px;
+	margin-right: 10px;
+}
+.content_win .header .head_name .member span{
+	display: block;
+	line-height: 18px;
+}
+
+
+.information{
+	padding: 30px 0;
+}
+.information .card_information li{
+	color: #313131;
+	font-weight: bold;
+	line-height: 40px;
+}
+.information .card_information li p{
+	color: #939393;
+	font-weight: 400;
+}
+.information .card_information li span{
+	color: #313131;
+}
+.information .card{
+	width: 170px;
+	/*height: 80px;*/
+	box-shadow:0px 0px 5px 0px #b2b7c1;
+	*border: 1px solid #eee;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-top: 40px;
+}
+.information .card span{
+	display: block;
+	line-height: 35px;
+	text-indent: 3em;
+	color: #6C6C6C;
+	background: #FAFAFA url(card01.png) no-repeat 15px center;
+}
+.information .card p{
+	line-height: 25px;
+	text-indent: 1em;
+}
+
+.information .title{
+	display: block;
+	color: #313131;
+	font-weight: bold;
+	line-height: 40px;
+	text-indent: 2em;
+}
+.information .money{
+	float: left;
+	width: 230px;
+	border-right: 1px solid #E8E8E8;
+	margin-left: 28px;
+}
+.information .money p{
+	color: #939393;
+}
+.information .money span{
+	font-size: 24px;
+	line-height: 40px;
+	color: #EC3722;
+}
+.information .money_bottom{
+	width: 98%;
+	margin: auto;
+	height: 20px;
+	border-bottom: 1px solid #EEEEEE;
+	/*background: url(money_bottom.png) no-repeat 0 100%;*/
+	position: relative;
+}
+.information .money_bottom i{
+	position: absolute;
+	bottom: -2px;
+	left: 100px;
+	display: block;
+	width: 9px;
+	height: 13px;
+	/*border-bottom: 1px solid #EEEEEE;*/
+	background: #fff url(stair_icon_up.png) no-repeat -6px 0;
+}
+.information .money_information{
+	float: left;
+	/*border: 1px solid red;*/
+	margin: 60px 0 0 100px;
+}
+
+.information .money_information li{
+	height: 40px;
+}
+.information .money_information li b{
+	display: block;
+	width: 20px;
+	height: 10px;
+	background: #467CD4;
+	float: left;
+	margin-top: 8px;
+}
+.information .money_information li span{
+	font-size: 12px;
+	color: #A5A5A5;
+	margin-left: 10px;
+	float: left;
+}
+.information .profit{
+	/*border: 1px solid red;*/
+}
+.information .profit li{
+	float: left;
+    width: 230px;
+    height: 40px;
+    border-right: 1px solid #E8E8E8;
+    margin-left: 28px;	
+    padding-top: 20px;
+}
+.information .profit li i{
+	display: block;
+	width: 18px;
+	height: 18px;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+	background: url(profit02.png) no-repeat center center;
+}
+.information .profit li p{
+	color: #939393;
+}
+.information .profit li p span{
+	color: #ED2211;
+}

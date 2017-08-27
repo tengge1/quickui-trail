@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<!--框架必需start-->
+		<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+		<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+		<script type="text/javascript" src="../../libs/js/framework.js"></script>
+		<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" id="skin" prePath="../../" />
+		<link rel="stylesheet" type="text/css" id="customSkin" />
+		<!--框架必需end-->
+		<script src="../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<!--基本选项卡end-->
+		<style type="text/css">
+			
+			body{
+				background: #EDF2F6;
+			}
+			.timeline{
+				width: 100%;
+			}
+			.timeline ul li .intro{
+				width: 350px;
+			}
+			
+			.timeline ul li ,
+			.timeline ul li.highlight {
+			    background: url(style/circle.png) no-repeat 91px 0px;
+			}
+			.timeline ul li.circle2 {
+				background: url(style/circle2.png) no-repeat 91px 0px;
+			}
+			
+			.timeline ul li.circle3{
+				background: url(style/circle3.png) no-repeat 91px 0px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="content_win">
+			
+			<div class="product_list">
+				<div class="list_con">
+					<img src="style/list1.png"/>
+					<div class="text">
+						<span>发布产品</span>
+						<p>1288 <span>个</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="list_con">
+					<img src="style/list2.png"/>
+					<div class="text">
+						<span>参展递送样品</span>
+						<p>1288 <span>个</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="list_con">
+					<img src="style/list3.png"/>
+					<div class="text">
+						<span>免费递送样品</span>
+						<p>1288 <span>个</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="list_con">
+					<img src="style/list4.png"/>
+					<div class="text">
+						<span>接到询盘</span>
+						<p>1288 <span>个</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="list_con">
+					<img src="style/list5.png"/>
+					<div class="text">
+						<span>回复询价</span>
+						<p>1288 <span>个</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="list_con">
+					<img src="style/list1.png"/>
+					<div class="text">
+						<span>发布产品</span>
+						<p>1288 <span>个</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="list_con">
+					<img src="style/list2.png"/>
+					<div class="text">
+						<span>参展递送样品</span>
+						<p>1288 <span>个</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="list_con" style="margin: 0;">
+					<img src="style/list3.png"/>
+					<div class="text">
+						<span>免费递送样品</span>
+						<p>1288 <span>个</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;margin-bottom: 20px;">
+				<tr>
+					<td style="width: 300px;">
+						<div class="moban" style="width:300px;height: 290px;">
+							<div class="moban_content">
+								<span><i></i>20天后到期</span>
+								<div class="text">
+									<span class="pa">普A</span>
+									<span style="border: 0;">
+										<p>S11554</p>
+										<span>波兰网贸馆</span>
+									</span>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="moban_content moban_content2">
+								<span><i></i>20天后到期</span>
+								<div class="text">
+									<span class="pa pa2">普A</span>
+									<span style="border: 0;">
+										<p>S11554</p>
+										<span>波兰网贸馆</span>
+									</span>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td style="width: 100%;vertical-align: top;">
+						<div class="moban moban2" style="height: 290px;">
+							<div class="title">
+								<span>接到询价</span>
+								<a href="javascript:;">更多>></a>
+								<div class="clear"></div>
+							</div>
+							<div class="moban_content">
+								<div id="container" style="width: 100%; height: 216px;"></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+			</table>
+			<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;margin-bottom: 20px;background: #fff;">
+				<tr>
+					<td style="width: 50%;background: #EDF2F6;">
+						<div class="" style="height: 520px;padding-right: 20px;">
+							<div class="new">
+								<div class="title">
+									<span>新闻资讯</span>
+									<a href="javascript:;">更多>></a>
+									<div class="clear"></div>
+								</div>
+								<ul>
+									<li>
+										<img src="style/new1.png" alt="" />
+										<p>大龙网加拿大跨境电商产业正式投入运营<span>2016-02-20</span></p>
+										<span>当地时间6月28日，大龙网加拿大跨境电商产业园在多伦多正式投入运营正式投入运营正式投入运营正式投入运营，据悉，这将是大龙网在北美地区最大的跨境电商产业园...</span>
+										<div class="clear"></div>
+									</li>
+									<li>
+										<img src="style/new2.png" alt="" />
+										<p>大龙网加拿大跨境电商产业正式投入运营<span>2016-02-20</span></p>
+										<span>当地时间6月28日，大龙网加拿大跨境电商产业园在多伦多正式投入运营正式投入运营正式投入运营正式投入运营，据悉，这将是大龙网在北美地区最大的跨境电商产业园...</span>
+										<div class="clear"></div>
+									</li>
+									<li>
+										<img src="style/new3.png" alt="" />
+										<p>大龙网加拿大跨境电商产业正式投入运营<span>2016-02-20</span></p>
+										<span>当地时间6月28日，大龙网加拿大跨境电商产业园在多伦多正式投入运营正式投入运营正式投入运营正式投入运营，据悉，这将是大龙网在北美地区最大的跨境电商产业园...</span>
+										<div class="clear"></div>
+									</li>
+									<li>
+										<img src="style/new4.png" alt="" />
+										<p>大龙网加拿大跨境电商产业正式投入运营<span>2016-02-20</span></p>
+										<span>当地时间6月28日，大龙网加拿大跨境电商产业园在多伦多正式投入运营正式投入运营正式投入运营正式投入运营，据悉，这将是大龙网在北美地区最大的跨境电商产业园...</span>
+										<div class="clear"></div>
+									</li>
+									<li style="border: 0;">
+										<img src="style/new1.png" alt="" />
+										<p>大龙网加拿大跨境电商产业正式投入运营<span>2016-02-20</span></p>
+										<span>当地时间6月28日，大龙网加拿大跨境电商产业园在多伦多正式投入运营正式投入运营正式投入运营正式投入运营，据悉，这将是大龙网在北美地区最大的跨境电商产业园...</span>
+										<div class="clear"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</td>
+					<td style="width: 50%; perspective-origin: top;">
+						<div class="" style=" height: 520px;">
+							<div class="new">
+								<div class="title">
+									<span>最近匹配询价</span>
+									<a href="javascript:;">更多>></a>
+									<div class="clear"></div>
+								</div>
+								<div class="timeline">
+									<ul>
+										<li class="cls highlight">
+											<p class="date_time">9月1日</p>
+											<p class="intro">Touch UI实现了让一个初级开发者在很短时间内开发出一款精美、流畅的APP来。</p>
+										</li>
+										<li class="cls circle2">
+											<p class="date_time">8月1日</p>
+											<p class="intro">Touch UI实现了让一个初级开发者在很短时间内开发出一款精美、流畅的APP来。</p>
+										</li>
+										<li class="cls circle3">
+											<p class="date_time">7月1日</p>
+											<p class="intro">Touch UI实现了让一个初级开发者在很短时间内开发出一款精美、流畅的APP来。</p>
+										</li>
+										<li class="cls">
+											<p class="date_time">6月1日</p>
+											<p class="intro">Touch UI实现了让一个初级开发者在很短时间内开发出一款精美、流畅的APP来。</p>
+										</li>
+										<li class="cls circle2">
+											<p class="date_time">5月1日</p>
+											<p class="intro">Touch UI实现了让一个初级开发者在很短时间内开发出一款精美、流畅的APP来。</p>
+										</li>
+										<li class="cls circle3">
+											<p class="date_time">7月1日</p>
+											<p class="intro">Touch UI实现了让一个初级开发者在很短时间内开发出一款精美、流畅的APP来。</p>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<script type="text/javascript">
+			$('#container').highcharts({
+	            chart: {
+	                type: 'areaspline'
+	            },
+	            title: {
+	                text: ''
+	            },
+	            legend: {
+	                layout: 'vertical',
+	                align: 'left',
+	                verticalAlign: 'top',
+	                x: 150,
+	                y: 100,
+	                floating: true,
+	                borderWidth: 1,
+	                backgroundColor: '#FFFFFF',
+	                enabled:false
+	            },
+	            xAxis: {
+	                categories: [
+	                    '1天',
+	                    '3天',
+	                    '6天',
+	                    '9天',
+	                    '12天',
+	                    '15天',
+	                    '18天',
+	                    '21天',
+	                    '24天',
+	                    '27天'
+	                ]
+	            },
+	            yAxis: {
+	                title: {
+	                    text: ''
+	                }
+	            },
+	            tooltip: {
+	                shared: true,
+	                valueSuffix: '条'
+	            },
+	            credits: {
+	                enabled: false
+	            },
+	            plotOptions: {
+	                areaspline: {
+	                    fillOpacity: 0.1
+	                }
+	            },
+	            series: [{
+	                name: '北京',
+	                data: [3, 4, 3, 5, 4, 10, 12,15,18,30]
+	            }],
+	            colors:["#6DBCE9"]
+	        });
+
+		</script>
+	</body>
+
+</html>

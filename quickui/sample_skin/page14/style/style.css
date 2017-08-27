@@ -1,0 +1,98 @@
+
+
+/*主要模板（信息栏目3）*/
+/*index*/
+.mainindex{padding:20px; overflow:hidden;}
+.welinfo{height:32px; line-height:32px; padding-bottom:8px;}
+.welinfo span{
+	float:left;
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+._sun{
+	background: url(icon_sun.png) no-repeat center center;
+}
+._time{
+	background: url(icon_time.png) no-repeat center center;
+}
+._Prompt{
+	background: url(icon_Prompt.png) no-repeat center center;
+}
+.welinfo b{padding-left:8px;}
+.welinfo a{padding-left:15px;}
+.welinfo a:hover{}
+.welinfo i{font-style:normal; padding-left:8px;}
+.xline{border-bottom:solid 1px #dfe9ee; height:5px;}
+.iconlist{padding-left:40px; overflow:hidden;}
+.iconlist li{
+	text-align:center; 
+	float:left;
+	margin-top:25px;
+	position: relative;
+	width: 100px;
+	height: 60px;
+}
+.iconlist li p{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 25px;
+	display: block;
+	padding: 0;
+	margin: 0
+}
+.ibox{clear:both; padding-left:40px; padding-top:18px; overflow:hidden; padding-bottom:18px;}
+.ibtn{
+	border:solid 1px #D8E3EF; 
+	border-radius: 5px;
+	height:30px; 	
+	line-height:30px; 
+	display:block; 
+	float:left; 
+	padding:0 10px 0 30px; 
+	cursor:pointer;
+	background: url(icon_addFun.png) no-repeat 5px center;
+}
+.ibtn img{margin-top:5px; float:left; padding-right:7px;}
+.box{height:15px;}
+.infolist{padding-left:40px; padding-bottom:15px;}
+.infolist li{ 
+	line-height:32px;
+	height:32px; 
+	margin-bottom:8px;
+}
+.infolist li span{
+	float:left; 
+	display:block; 
+	margin-right:10px;
+}
+.umlist{padding-left:40px;}
+.umlist li{
+	height: 30px;
+	line-height: 30px;
+	float:left; 
+	background:url(icon_right1.png) no-repeat 0 50%; 
+	padding-left:20px; 
+	margin-right:15px;
+}
+
+._user_set{
+	background: url(icon_user_set.png) no-repeat center 0;
+}
+._release{
+	background: url(icon_release.png) no-repeat center 0;
+}
+._dataStatistics{
+	background: url(icon_dataStatistics.png) no-repeat center 0;
+}
+._uploading{
+	background: url(icon_uploading.png) no-repeat center 0;
+}
+._navManage{
+	background: url(icon_navManage.png) no-repeat center 0;
+}
+._inquire{
+	background: url(icon_inquire.png) no-repeat center 0;
+}

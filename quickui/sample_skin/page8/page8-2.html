@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<!--框架必需start-->
+		<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+		<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+		<script type="text/javascript" src="../../libs/js/framework.js"></script>
+		<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" id="skin" prePath="../../" />
+		<link rel="stylesheet" type="text/css" id="customSkin" />
+		<!--框架必需end-->
+		
+		<!-- 日期选择框start -->
+		<script type="text/javascript" src="../../libs/js/form/datePicker/WdatePicker.js"></script>
+		<!-- 日期选择框end -->
+		<script src="../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<style type="text/css">
+			
+			body{
+				background: #EDF2F6;
+			}
+			.dateIcon{
+				width: 100px;
+				border: 1px solid #C9CDD0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="Content_win">
+			<div class="content_1" style="margin: 0;">
+				<div class="data_win1">
+					<input type="text" id="beginTime" class="dateIcon" /><span>至</span>
+					<input type="text" id="endTime" class="dateIcon" />
+					<button type="button">查询</button>
+					<div class="clear"></div>
+				</div>
+				<div class="tab_time">
+					<ul>
+						<li class="active">今日</li>
+						<li>昨日</li>
+						<li>近30日</li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="content_1">
+				<div class="index">
+					指标：<input type="checkbox" id="sing-2" name="hobby-2" value="唱歌" /><label for="sing-2" class="hand">全部</label>
+					<input type="checkbox" id="dance-2" name="hobby-2" value="TOUCH UI" checked="checked" /><label for="dance-2" class="hand">TOUCH UI</label>
+					<input type="checkbox" id="football-2" name="hobby-2" value="QUICK UI" checked="checked" /><label for="football-2" class="hand">QUICK UI</label>
+					<input type="checkbox" id="football-2" name="hobby-2" value="Leader UI" checked="checked" /><label for="football-2" class="hand">Leader UI</label>
+				</div>
+				<div id="container" style="width: 96%; height: 600px; margin: 0 auto"></div>
+			</div>
+			<div class="content_1">
+				<div class="title">
+					<span>2016年8月15日至2016年8月22日点击次数</span>
+					<div class="data_win1" style="float: right;padding: 0;">
+						<button type="button"><span class="icon_export">导出</span></button>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="table_win">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>日期</th>
+							<th>TOUCH UI</th>
+							<th>QUICK UI</th>
+							<th>Leader UI</th>
+						</tr>
+						
+						<tr>
+							<td>2016-08-15</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>2016-08-15</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>2016-08-15</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>2016-08-15</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>2016-08-15</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>2016-08-15</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>合计</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+	<script type="text/javascript">
+		var dateSkin = "blue";
+		
+		function initComplete() {
+			//获取当前主题风格，用于设置日期控件的皮肤
+			try {
+				dateSkin = themeColor;
+			} catch(e) {}
+			
+			var color_val=['#6CAFE3','#FD7B7B','#55CE87'];
+			if(themeColor=="blue"){
+		    	color_val=['#10AEF7','#7CC422','#FFA060'];
+		    }
+		    
+
+			//自定义点击触发日期控件
+			document.getElementById('beginTime').onfocus = function() {
+				var endtimeTf = $dp.$('endTime');
+				WdatePicker({
+					skin: dateSkin,
+					onpicked: function() {
+						endtimeTf.focus();
+					},
+					maxDate: '#F{$dp.$D(\'endTime\')}'
+				});
+			}
+			document.getElementById('endTime').onfocus = function() {
+				//这里设置了最大日期为当前日期，如果不需要则把maxDate:'%y-%M-%d'去掉
+				WdatePicker({
+					skin: dateSkin,
+					minDate: '#F{$dp.$D(\'beginTime\')}'
+				});
+			}
+			
+			$('#container').highcharts({
+	            chart: {
+	                type: 'column',
+					 zoomType: 'x'
+	            },
+	            title: {
+	                text: ''
+	            },
+	           subtitle: {
+					text: document.ontouchstart === undefined ?
+	                    '' :
+	                    ''
+	            },
+	            xAxis: {
+	                categories: [
+	                    '2016-08-15',
+	                    '2016-08-16',
+	                    '2016-08-17',
+	                    '2016-08-18',
+	                    '2016-08-19',
+	                    '2016-08-20',
+	                    '2016-08-21',
+	                    '2016-08-22'
+	                ]
+	            },
+	            yAxis: {
+	                min: 0,
+	                title: {
+	                    text: ''
+	                }
+	            },
+	            tooltip: {
+	                headerFormat: '<span>{point.key}</span><table>',
+	                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	                    '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+	                footerFormat: '</table>',
+	                shared: true,
+	                useHTML: true
+	            },
+	            plotOptions: {
+	                column: {
+	                    pointPadding: 0.2,
+	                    borderWidth: 0
+	                }
+	            },
+	            series: [{
+	                name: 'TOUCH UI',
+	                data: [0, 90, 106, 129, 144, 176, 135, 0]
+	    
+	            }, {
+	                name: 'QUICK UI',
+	                data: [0, 50, 98, 93, 106, 84, 105, 0]
+	    
+	            }, {
+	                name: 'Leader UI',
+	                data: [0, 30, 39, 41, 0, 48, 59, 0]
+	    
+	            }],
+	            colors:color_val
+	        });
+		};
+		
+
+	</script>
+	</body>
+
+</html>

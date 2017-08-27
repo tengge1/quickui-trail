@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<!--框架必需start-->
+		<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+		<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+		<script type="text/javascript" src="../../libs/js/framework.js"></script>
+		<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" id="skin" prePath="../../" />
+		<link rel="stylesheet" type="text/css" id="customSkin" />
+		<!--框架必需end-->
+		
+		<!-- 日期选择框start -->
+		<script type="text/javascript" src="../../libs/js/form/datePicker/WdatePicker.js"></script>
+		<!-- 日期选择框end -->
+		<script src="../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<style type="text/css">
+			
+			body{
+				background: #EDF2F6;
+			}
+			.dateIcon{
+				width: 100px;
+				border: 1px solid #C9CDD0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="Content_win">
+			<div class="content_1" style="margin: 0;">
+				<div class="title">
+					<span>应用概要</span>
+					<div class="clear"></div>
+				</div>
+				<ul class="user_data">
+					<li style="background: #10AEF7;">
+						<p style="border-color: #eee;background-position: 40px 10px;">新增用户</p>
+						<span>58267</span>
+					</li>
+					<li style="background: #7CC422;">
+						<p style="border-color: #eee;background-position: 40px -15px;">积累用户</p>
+						<span>58267</span>
+					</li>
+					<li style="background: #60D0FE;">
+						<p style="border-color: #eee;background-position: 20px -44px;">过去7天活跃用户</p>
+						<span>58267</span>
+					</li>
+					<li style="margin: 0;background: #FFA060;">
+						<p style="border-color: #eee;background-position: 15px -75px;">过去30天活跃用户</p>
+						<span>58267</span>
+					</li>
+					<div class="clear"></div>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="content_1">
+				<div class="title">
+					<span>整体趋势</span>
+					<div class="data_win">
+						<input type="text" id="beginTime" class="dateIcon" /><span>至</span>
+						<input type="text" id="endTime" class="dateIcon" />
+						<button type="button"><span class="icon_export">导出</span></button>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="all_data">
+					<div>
+						<div class="buttonGroup" itemWidth="120" style="float: left;">
+							<span class="leftButton active">新增用户</span>
+							<span class="centerButton">活跃用户</span>
+							<span class="centerButton">累积用户</span>
+							<span class="centerButton">平均日使用时长</span>
+							<span class="rightButton">平均日启动次数</span>
+						</div>
+						<div class="buttonGroup" itemWidth="50" style="float: right;">
+							<span class="leftButton">时</span>
+							<span class="centerButton">天</span>
+							<span class="centerButton active">周</span>
+							<span class="rightButton">月</span>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="index">
+						指标：<input type="checkbox" id="sing-2" name="hobby-2" value="唱歌" /><label for="sing-2" class="hand">全部</label>
+						<input type="checkbox" id="dance-2" name="hobby-2" value="TOUCH UI" checked="checked" /><label for="dance-2" class="hand">TOUCH UI</label>
+						<input type="checkbox" id="football-2" name="hobby-2" value="QUICK UI" checked="checked" /><label for="football-2" class="hand">QUICK UI</label>
+					</div>
+					<div id="container" style="min-width: 310px; height: 280px; margin: 0 auto"></div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="content_1" style="width: 49%;height: 470px;float: left;">
+				<div class="title">
+					<span>来源</span>
+					<div class="clear"></div>
+				</div>
+				<div class="buttonGroup" style="width:240px;margin: 15px;">
+					<span class="leftButton active">新增用户</span>
+					<span class="centerButton">活跃用户</span>
+					<span class="rightButton">累积用户</span>
+				</div>
+				<div id="container1" style="width: 98%; height: 350px; margin: 0 auto"></div>
+			</div>
+			<div class="content_1" style="width: 49%;height: 470px;float: right;">
+				<div class="title">
+					<span>渠道</span>
+					<div class="clear"></div>
+				</div>
+				<div class="buttonGroup" style="width:240px;margin: 15px;">
+					<span class="leftButton active">新增用户</span>
+					<span class="centerButton">活跃用户</span>
+					<span class="rightButton">累积用户</span>
+				</div>
+				<div id="container2" style="min-width: 310px; height: 350px; margin: 0 auto"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+	<script type="text/javascript">
+		var dateSkin = "blue";
+		var chart;
+		function initComplete() {
+			//获取当前主题风格，用于设置日期控件的皮肤
+			try {
+				dateSkin = themeColor;
+			} catch(e) {}
+
+			//自定义点击触发日期控件
+			document.getElementById('beginTime').onfocus = function() {
+				var endtimeTf = $dp.$('endTime');
+				WdatePicker({
+					skin: dateSkin,
+					onpicked: function() {
+						endtimeTf.focus();
+					},
+					maxDate: '#F{$dp.$D(\'endTime\')}'
+				});
+			}
+			document.getElementById('endTime').onfocus = function() {
+				//这里设置了最大日期为当前日期，如果不需要则把maxDate:'%y-%M-%d'去掉
+				WdatePicker({
+					skin: dateSkin,
+					minDate: '#F{$dp.$D(\'beginTime\')}'
+				});
+			}
+		};
+		$('#container').highcharts({
+            chart: {
+	            zoomType: 'x'
+	        },
+	     	title: {
+                text: ''
+            },
+	      	
+            xAxis: {
+                categories: ['7/12','7/13','7/14','7/15','7/16','7/17','7/18']
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+              crosshairs: true,
+                valueSuffix: ''
+            },
+        	plotOptions: {
+                series: {
+                    cursor: 'pointer',
+                    point: {
+                        events: {
+                            click: function() {
+                                alert(this.series.name+","+this.x+","+this.y)
+                            }
+                        }
+                    },
+                    marker: {
+                        lineWidth: 1
+                    }
+                }
+            },
+            series: [{
+                name: 'TOUCH UI',
+                data: [500,2000,1200,2000,100,500,1500],
+                color: '#10AEF7'
+            }, {
+                name: 'QUICK UI',
+                data: [500,800,1000,10,800,1500,1000],
+                 color: '#7CC422'
+            }]
+        });
+        
+        
+//		$('#container1').highcharts({
+//          chart: {
+//              plotBackgroundColor: null,
+//              plotBorderWidth: null,
+//              plotShadow: false
+//          },
+//          title: {
+//              text: ''
+//          },
+//          tooltip: {
+//      	    pointFormat: '{series.name} <b>{point.percentage:.1f}%</b>'
+//          },
+//          plotOptions: {
+//              pie: {
+//                  allowPointSelect: true,
+//                  cursor: 'pointer',
+//                  dataLabels: {
+//	                    enabled: true,
+//	                    color: '#767676',
+//	                    connectorColor: '#767676',
+//	                    format: '{point.percentage:.1f} %'
+//	                },
+//                  showInLegend: true
+//              }
+//          },
+//          series: [{
+//              type: 'pie',
+//              name: '份额：',
+//              data: [
+//                  ['pc',60],
+//                  ['APP', 20],
+//                  ['微信', 10],
+//                  ['H5',10]
+//              ]
+//          }],
+//          colors:['#6CAFE3','#63D1E2','#F97777','#55CE87']
+//      });
+		
+		
+		$('#container1').highcharts({
+	        chart: {
+	            plotBackgroundColor: null,
+	            plotBorderWidth: null,
+	            plotShadow: false
+	        },
+	        title: {
+	            floating:true,
+	            text: '圆心显示的标题'
+	        },
+	        tooltip: {
+	            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	        },
+	        plotOptions: {
+	            pie: {
+	                allowPointSelect: true,
+	                cursor: 'pointer',
+	                dataLabels: {
+	                    enabled: true,
+	                    softConnector: false,
+	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+	                    padding: 0,
+                  		distance: 80
+	                },
+	                point: {
+	                    events: {
+	                        mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+	                            // 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+	                            chart.setTitle({
+	                                text: e.target.name+ '\t'+ e.target.y + ' %'
+	                            });
+	                        }
+	                    }
+	                },
+	                size:120,
+	                showInLegend: true
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            innerSize: '80%',
+	            name: '市场份额',
+	            data: [
+	                ['PC',60],
+                    ['APP', 20],
+                    ['微信', 10],
+                    ['H5',10]
+	            ]
+	        }],
+	        colors:['#10AEF7','#7CC422','#60D0FE','#FFA060']
+	    }, function(c) {
+	        // 环形图圆心
+	        var centerY = c.series[0].center[1],
+	            titleHeight = parseInt(c.title.styles.fontSize);
+	        c.setTitle({
+	            y:centerY + titleHeight/2
+	        });
+	        chart = c;
+	    });
+	    
+	    $('#container2').highcharts({
+	        chart: {
+	            plotBackgroundColor: null,
+	            plotBorderWidth: null,
+	            plotShadow: false
+	        },
+	        title: {
+	            floating:true,
+	            text: '圆心显示的标题'
+	        },
+	        tooltip: {
+	            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	        },
+	        plotOptions: {
+	            pie: {
+	                allowPointSelect: true,
+	                cursor: 'pointer',
+	                dataLabels: {
+	                    enabled: true,
+	                    softConnector: false,
+	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+	                    padding: 0,
+                  		distance: 80
+	                },
+	                point: {
+	                    events: {
+	                        mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+	                            // 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+	                            chart.setTitle({
+	                                text: e.target.name+ '\t'+ e.target.y + ' %'
+	                            });
+	                        }
+	                    }
+	                },
+	                size:120,
+	                showInLegend: true
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            innerSize: '80%',
+	            name: '市场份额',
+	            data: [
+	                ['PC',50],
+                    ['APP', 15],
+                    ['微信', 20],
+                    ['H5',15]
+	            ]
+	        }],
+	    	colors:['#10AEF7','#7CC422','#60D0FE','#FFA060']
+	    }, function(c) {
+	        // 环形图圆心
+	        var centerY = c.series[0].center[1],
+	            titleHeight = parseInt(c.title.styles.fontSize);
+	        c.setTitle({
+	            y:centerY + titleHeight/2
+	        });
+	        chart = c;
+	    });
+	</script>
+	</body>
+
+</html>
